@@ -517,26 +517,3 @@ async def get_encrypted_schema():
         })
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
-
-# تشغيل التطبيق باستخدام uvicorn
-if __name__ == "__main__":
-    import uvicorn
-    
-    # إعدادت الخادم
-    config = uvicorn.Config(
-        app=app,
-        host="0.0.0.0",
-        port=8000,
-        reload=True,  # إعادة تحميل تلقائي عند تغيير الكود
-        workers=1,    # عدد العمليات
-        backlog=2048, # طابور الاتصالات المعلقة
-        timeout_keep_alive=5, # وقت الانتظار للاتصالات النشطة
-        access_log=True, # تسجيل الوصول
-        log_level="info", # مستوى التسجيل
-    )
-    
-    server = uvicorn.Server(config)
-    try:
-        server.run()
-    except Exception as e:
-        print(f"خطأ في تشغيل الخادم: {e}")
