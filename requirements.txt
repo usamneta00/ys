@@ -8,4 +8,4 @@ tabulate
 jinja2
 python-multipart
 cryptography
-jwt
+PyJWT

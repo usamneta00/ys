@@ -13,7 +13,7 @@ from cryptography.fernet import Fernet
 import os
 from typing import Dict, List, Optional, Tuple
 from datetime import datetime, timedelta
-from jwt import encode, decode  # استيراد الدوال encode و decode بشكل صحيح
+import jwt
 import hashlib
 
 
@@ -81,7 +81,7 @@ class RemoteLicenseManager:
             'expires_at': (datetime.now() + timedelta(days=duration_days)).isoformat()
         }
         
-        return encode(  # استخدام encode بدلاً من jwt.encode
+        return jwt.encode(
             license_data,
             LICENSE_SECRET_KEY,
             algorithm="HS256"
@@ -143,7 +143,7 @@ class RemoteLicenseManager:
         """التحقق من صلاحية الترخيص"""
         try:
             # فك تشفير مفتاح الترخيص
-            license_data = decode(license_key, LICENSE_SECRET_KEY, algorithms=["HS256"])
+            license_data = jwt.decode(license_key, LICENSE_SECRET_KEY, algorithms=["HS256"])
             email = license_data.get('email')
             client_id = license_data.get('client_id')
             stored_hardware_id = license_data.get('hardware_id')
@@ -517,3 +517,5 @@ async def get_encrypted_schema():
         })
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
+
+
