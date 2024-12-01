@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yemensoft - المساعد الذكي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="static/js/main.js" defer></script>
+
+
+
+    <!-- مكتبات جافاسكريبت -->
+    <script src="/static/js/jquery-3.7.1.min.js"></script>  
+    <script src="/static/js/marked.min.js"></script>
+    <script src="/static/js/highlight.js"></script>
+    <script src="/static/js/sql.js"></script>
+    <script src="static/js/motion-one-dom.min.js"></script>
+    <link rel="stylesheet" href="/static/css/highlight/github.css" id="light-theme-highlight">
+    <link rel="stylesheet" href="/static/css/highlight/github-dark.css" id="dark-theme-highlight">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="icon" type="image/png" href="/static/images/website_top_logo_icon-150x150.png" alt="Logo">
+    <link rel="stylesheet" href="/static/css/fontawesome/all.css">
+
+
+<style>
+</style></head><body>
+    <div class="app-container">
+        <!-- القائمة الجانبية -->
+        <aside class="sidebar">
+
+            <div class="collapse-btn-group" style="position: absolute;left: 20px;">
+                <div style="display: flex; align-items: center;">
+                    <div class="vertical-divider"></div>
+                    <button class="collapse-btn button-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <polyline points="14 6 20 12 14 18"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="brand">
+                <img src="/static/images/website_top_logo_icon-150x150.png" alt="Onyx Logo" class="logo">
+                <div class="separator"></div>
+            </div>
+
+            <nav class="nav-links">
+                <ul class="menu-list">
+                    <li class="menu-item active">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-comment"></i>
+                            <span>الدردشة الذكية</span>
+                        </a>
+                    </li>
+                    <li class="menu-item disabled">
+                        <a href="#" class="menu-link">
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <i class="fas fa-comments icon" style="font-size: 80px; margin-bottom: 15px;"></i>
+                                <span class="text" style="text-align: center;">بدء محادثة مع Chat AI ينشئ مواضيع محادثة جديدة. ابدأ واستمتع بالمحادثة عندما تكون مستعدًا.</p>
+                                <span class="pro-badge">قريباً</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <!-- زر API -->
+            <button class="api-button">
+                <i class="fas fa-key"></i>
+                تعيين مفتاح API
+            </button>
+
+            <!-- معلومات المستخدم -->
+            <div class="user-panel">
+                <div class="user-info">
+                    <img src="/static/images/avatar.png" alt="User Avatar" class="avatar">
+                    <span class="username">مستخدم غير معروف</span>
+                </div>
+                <div class="user-actions">
+                    <button class="settings-btn">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="main-content">
+             <!-- زر الاسترجاع - سيظهر عند إخفاء الشريط الجانبي -->
+            <button class="restore-sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                 <line x1="9" y1="3" x2="9" y2="21"></line>
+                </svg>
+            </button>
+
+            <header class="navbar">
+                <div class="breadcrumb">
+                    <span>الرئيسية</span>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>محادثة أونكس الذكية</span>
+                </div>
+                
+                <div class="navbar-actions">
+                    
+                    <button class="api-key-btn">
+                        <i class="fas fa-key"></i>
+                    </button>
+                    
+                    <div class="info-btn-container">
+                        <button class="info-btn">
+                            <i class="fas fa-info-circle"></i>
+                        </button>
+                        <div class="dropdown-menu info-dropdown">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item primary">
+                                    سطح  مكتب  Onyx AI
+                               </a>
+                               <a href="#" class="dropdown-item">
+                                   مشاهدة الوثائق (قريباً)
+                               </a>
+                               <a href="#" class="dropdown-item">
+                                   تجربة النسخة المجانية (تحت التطوير)
+                               </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <div class="user-menu">
+                        <div class="user-avatar">YS</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- منطقة المحادثة -->
+                <div class="chat-area">
+                    <div class="message-list" >
+                        <!-- رسائل المحادثة ستضاف هنا ديناميكياً -->
+                        <div class="image-grid messages-grid" id="messagesGrid">
+                            <div class="empty-state">
+        
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message-input">
+                        <textarea placeholder="اكتب رسالتك هنا..."></textarea>
+                        <button class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <button class="send-btn voice-button">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- نافذة API Modal -->
+    <div class="modal" id="apiModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>أدخل مفتاح OpenAI API الخاص بك</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">
+                    تحتاج إلى مفتاح OpenAI API لاستخدام ميزات Chat AI. 
+                    يتم تخزين مفتاح API الخاص بك محلياً على متصفحك ولا يتم إرساله إلى أي مكان آخر.
+                </p>
+                <div class="input-group">
+                    <input type="text" placeholder="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx" class="api-input">
+                    <button class="save-api-btn">حفظ مفتاح API</button>
+                </div>
+                <a href="https://platform.openai.com/account/api-keys" class="api-link" target="_blank">
+                    احصل على مفتاح API الخاص بك من لوحة تحكم OpenAI
+                </a>
+                
+                <div class="help-accordion">
+                    <button class="accordion-btn">
+                        مفتاح API الخاص بك لا يعمل؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>تأكد من أن لديك <a href="https://platform.openai.com/account/">حساب OpenAI</a> ومفتاح API صالح.</li>
+                            <li>تأكد من إضافة معلومات الفترة الخاصة بك في <a href="https://platform.openai.com/account/billing/overview">صفحة فوترة OpenAI</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+                
+    <!-- قائمة المستخدم المنسدلة -->
+    <div class="dropdown-menu user-dropdown">
+        <div class="dropdown-header">
+            👋 مرحباً، Adela
+        </div>
+        <div class="dropdown-content">
+            <a href="/settings" class="dropdown-item">
+                إعدادات الملف الشخصي
+            </a>
+            <a href="#" class="dropdown-item">
+                إعدادات النشرة الإخبارية
+            </a>
+            <a href="#" class="dropdown-item danger">
+                تسجيل الخروج
+            </a>
+        </div>
+    </div>
+    <!-- أضف هذا HTML في نهاية body -->
+<div class="progress-bar-container" id="progressBar">
+    <div class="progress-bar"></div>
+</div>
+    <script>
+// إدارة حالة الثيم
+let isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+// تعريف المتغيرات العامة
+let isRecording = false;
+let mediaRecorder = null;
+let audioChunks = [];
+let isProcessing = false;
+let pressTimer = null;
+
+// تحديد العناصر
+const apiModal = document.getElementById('apiModal');
+const apiKeyBtn = document.querySelector('.api-key-btn');
+const apiButton = document.querySelector('.api-button');
+const closeBtn = document.querySelector('.close-btn');
+const saveApiBtn = document.querySelector('.save-api-btn');
+const apiInput = document.querySelector('.api-input');
+const themeToggle = document.querySelector('.theme-toggle');
+const infoBtn = document.querySelector('.info-btn');
+const infoDropdown = document.querySelector('.info-dropdown');
+const userDropdown = document.querySelector('.user-dropdown');
+const accordionBtn = document.querySelector('.accordion-btn');
+const accordionContent = document.querySelector('.accordion-content');
+const settingsBtn = document.querySelector('.settings-btn');
+const logoutBtn = document.querySelector('.logout-btn');
+const messageInput = document.querySelector('.message-input textarea');
+const sendBtn = document.querySelector('.send-btn');
+const messageList = document.querySelector('.message-list');
+const messagesGrid = document.getElementById('messagesGrid');
+const voiceButton = document.querySelector('.voice-button');
+
+// إعداد خيارات marked
+marked.setOptions({
+    gfm: true,
+    breaks: true,
+    tables: true,
+    langPrefix: 'language-',
+});
+
+// تطبيق الثيم المحفوظ
+if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+    themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    document.getElementById('light-theme-highlight').disabled = true;
+    document.getElementById('dark-theme-highlight').disabled = false;
+}else{
+    document.getElementById('light-theme-highlight').disabled = false;
+    document.getElementById('dark-theme-highlight').disabled = true;
+}   
+
+// إدارة النوافذ المنبثقة API
+function openApiModal() {
+    apiModal.classList.add('active');
+}
+
+function closeApiModal() {
+    apiModal.classList.remove('active');
+}
+
+// حفظ مفتاح API
+function saveApiKey() {
+    const apiKey = apiInput.value.trim();
+    if (apiKey && apiKey.startsWith('sk-')) {
+        localStorage.setItem('apiKey', apiKey);
+        showToast('تم حفظ مفتاح API بنجاح!', 'success');
+        closeApiModal();
+    } else {
+        showToast('مفتاح API غير صالح', 'error');
+    }
+}
+// إدارة الثيم
+function toggleTheme() {
+    isDarkMode = !isDarkMode;
+    document.body.classList.toggle('dark-mode');
+    themeToggle.querySelector('i').classList.toggle('fa-moon');
+    themeToggle.querySelector('i').classList.toggle('fa-sun');
+    localStorage.setItem('darkMode', isDarkMode);
+
+    // تحديث ملفات CSS للثيم
+    const lightThemeLink = document.getElementById('light-theme-highlight');
+    const darkThemeLink = document.getElementById('dark-theme-highlight');
+
+    if (isDarkMode) {
+        // إعادة تحميل ملف الثيم الداكن
+        const newDarkLink = darkThemeLink.cloneNode(true);
+        darkThemeLink.parentNode.replaceChild(newDarkLink, darkThemeLink);
+        newDarkLink.disabled = false;
+        lightThemeLink.disabled = true;
+    } else {
+        // إعادة تحميل ملف الثيم الفاتح 
+        const newLightLink = lightThemeLink.cloneNode(true);
+        lightThemeLink.parentNode.replaceChild(newLightLink, lightThemeLink);
+        newLightLink.disabled = false;
+        darkThemeLink.disabled = true;
+    }
+}
+
+// إدارة القوائم المنسدلة
+function toggleDropdown(dropdown) {
+    // إغلاق جميع القوائم المنسدلة الأخرى
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== dropdown) menu.classList.remove('active');
+    });
+    dropdown.classList.toggle('active');
+}
+
+// إدارة الأكورديون
+function toggleAccordion() {
+    accordionContent.classList.toggle('active');
+    const icon = accordionBtn.querySelector('i');
+    icon.classList.toggle('fa-chevron-up');
+    icon.classList.toggle('fa-chevron-down');
+}
+
+
+
+
+
+// إظها رسالة التنبيه
+function showToast(message, type) {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
+
+// إضافة مستمعي الأحداث
+apiKeyBtn.addEventListener('click', openApiModal);
+apiButton.addEventListener('click', openApiModal);
+closeBtn.addEventListener('click', closeApiModal);
+saveApiBtn.addEventListener('click', saveApiKey);
+themeToggle.addEventListener('click', toggleTheme);
+infoBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    infoDropdown.classList.toggle('active');
+});
+userDropdown.addEventListener('click', () => toggleDropdown(userDropdown));
+accordionBtn.addEventListener('click', toggleAccordion);
+
+sendBtn.addEventListener('click', async function(e) {
+    if (messageInput.value.trim() !== '') {
+        const inputText = messageInput.value.trim();
+        messageInput.value = '';
+        messageInput.disabled = true;
+        
+        try {
+            await addMessage(inputText);
+        } finally {
+            messageInput.disabled = false;
+            messageInput.focus();
+        }
+    }
+});
+
+// إضافة مستمعات الأحداث
+messageInput.addEventListener('keypress', async function(e) {
+    if (e.key === 'Enter' && this.value.trim() !== '') {
+        const inputText = this.value.trim();
+        this.value = '';
+        this.disabled = true;
+        
+        try {
+            await addMessage(inputText);
+        } finally {
+            this.disabled = false;
+            this.focus();
+        }
+    }
+});
+
+// إغلاق القوائم المنسدلة عند النقر خارجها
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.info-btn-container')) {
+        infoDropdown.classList.remove('active');
+    }
+    if (!e.target.closest('.user-menu') && !e.target.closest('.user-dropdown')) {
+        userDropdown.classList.remove('active');
+    }
+});
+
+// إغلاق النافذة المنبثقة عند النقر خارجها
+apiModal.addEventListener('click', (e) => {
+    if (e.target === apiModal) {
+        closeApiModal();
+    }
+});
+
+// تحميل مفتاح API المحفوظ
+window.addEventListener('load', () => {
+    const savedApiKey = localStorage.getItem('apiKey');
+    if (savedApiKey) {
+        apiInput.value = savedApiKey;
+    }
+});
+
+// إضافة مستمعي أحداث للأزرار الإضافية
+settingsBtn.addEventListener('click', () => {
+    showToast('عذراً، هذه الميزة سيتم إطلاقها قريباً', 'warning');
+});
+
+logoutBtn.addEventListener('click', () => {
+    showToast('تم تسجيل الخروج بنجاح', 'success');
+    // هنا يمكنك إضافة منطق تسجيل الخروج
+});
+
+  // داخل دالة processMarkdownResponse
+  function processMarkdownResponse(response, sql_query='') {
+    const emptyState = messagesGrid.querySelector('.empty-state');
+    if (emptyState) {
+        emptyState.remove();
+    }
+
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message-bubble system-message markdown-content';
+
+    let markdownText = response;
+    if (typeof response === 'string') {
+        console.log(markdownText);
+
+        // إنشاء محتوى SQL Query
+        const sqlHtml = sql_query ? `
+            <div class="sql-section">
+                <button class="sql-toggle-btn">
+                    <i class="fas fa-code"></i>
+                    <span class="btn-text">عرض SQL Query</span>
+                </button>
+                <div class="sql-content" style="display: none;">
+                    <div class="sql-header">
+                        <span>SQL Query</span>
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                            نسخ
+                        </button>
+                    </div>
+                    <pre dir="ltr" style="width: fit-content; min-width: min-content; white-space: pre-wrap; word-break: break-word;"><code class="language-sql">${sql_query}</code></pre>
+                </div>
+            </div>
+        ` : '';
+
+        // تحويل النص إلى Markdown
+        const htmlContent = marked.parse(markdownText, {
+            gfm: true,
+            breaks: true,
+            tables: true,
+            pedantic: false,
+            sanitize: false,
+            smartLists: true,
+            smartypants: true
+        });
+
+
+        messageDiv.innerHTML = `
+            <div class="message-label">النظام</div>
+            <div class="message-container" style="display: flex; align-items: flex-start; gap: 12px;">
+                <div style="flex: 1;">
+                    <div class="starfox-cards" id="cards-4qcLSK" style="border-radius: 15px 15px 15px 0; max-width: 80%;">
+                        <div class="starfox-card" id="card-y9T5F2" style="border-radius: inherit;">
+                            <div class="starfox-card__content" style="padding: 12px 15px;">
+                                ${sqlHtml}
+                                <p class="starfox-paragraph starfox-paragraph--md" id="paragraph-G1HycM" style="margin: 0;">
+                                    ${htmlContent}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="message-time"></div>
+    `;
+
+
+        // إضافة مستمع الحدث للزر
+        const sqlToggleBtn = messageDiv.querySelector('.sql-toggle-btn');
+        const sqlContent = messageDiv.querySelector('.sql-content');
+        
+        if (sqlToggleBtn && sqlContent) {
+            sqlToggleBtn.addEventListener('click', function() {
+                const isHidden = sqlContent.style.display === 'none';
+                sqlContent.style.display = isHidden ? 'block' : 'none';
+                this.querySelector('.btn-text').textContent = isHidden ? 'إخفاء SQL Query' : 'عرض SQL Query';
+                this.classList.toggle('active', isHidden);
+            });
+        }
+
+        // إضافة مستمع الحدث لزر النسخ
+        const copyButton = messageDiv.querySelector('.copy-btn');
+        if (copyButton) {
+            copyButton.addEventListener('click', function() {
+                copyToClipboard(this);
+            });
+        }
+    }
+
+    messagesGrid.appendChild(messageDiv);
+    messageDiv.scrollIntoView({ behavior: 'smooth' });
+
+
+// تطبيق التلوين على الأكواد داخل الرسالة
+const codeBlocks = messageDiv.querySelectorAll('pre code');
+codeBlocks.forEach((block) => {
+    hljs.highlightElement(block);
+});
+}
+
+
+       // تعريف الدالة في النطاق العام
+function copyToClipboard(button) {
+    const sqlContent = button.closest('.sql-content');
+    if (!sqlContent) {
+        alert('لم يتم العثور على العنصر المطلوب.');
+        return;
+    }
+    const codeElement = sqlContent.querySelector('code');
+    if (!codeElement) {
+        alert('لم يتم العثور على عنصر الكود.');
+        return;
+    }
+    const sqlCode = codeElement.textContent;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(sqlCode).then(() => {
+            // تغيير شكل الزر للإشارة إلى النجاح
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> تم النسخ';
+            button.classList.add('copied');
+
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+                button.classList.remove('copied');
+            }, 2000);
+        }).catch(err => {
+            console.error('فشل النسخ:', err);
+            alert('حدث خطأ أثناء النسخ: ' + err);
+            // تغيير شكل الزر للإشارة إلى الخطأ
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-times"></i> فشل النسخ';
+            button.classList.add('copy-error');
+
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+                button.classList.remove('copy-error');
+            }, 2000);
+        });
+    } else {
+        // استخدام طريقة بديلة للنسخ
+        const textarea = document.createElement('textarea');
+        textarea.value = sqlCode;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            // تغيير شكل الزر للإشارة إلى النجاح
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> تم النسخ';
+            button.classList.add('copied');
+
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+                button.classList.remove('copied');
+            }, 2000);
+        } catch (err) {
+            console.error('فشل النسخ:', err);
+            alert('حدث خطأ أثناء النسخ: ' + err);
+            // تغيير شكل الزر للإشارة إلى الخطأ
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-times"></i> فشل النسخ';
+            button.classList.add('copy-error');
+
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+                button.classList.remove('copy-error');
+            }, 2000);
+        }
+        document.body.removeChild(textarea);
+    }
+}
+        // تحديث دالة إرسال الصوت مع إضافة تحديثات شريط التقدم
+        function sendAudio(audioBlob) {
+            if (isProcessing) return;
+            
+            isProcessing = true;
+            voiceButton.disabled = true;
+            
+            const progressBar = document.getElementById('progressBar');
+            const progressBarFill = progressBar.querySelector('.progress-bar');
+            
+            // عرض شريط التقدم وبدء التحديث التدريجي
+            progressBar.style.display = 'block';
+            progressBarFill.style.width = '0%';
+            
+            // بدء التحديث التدريجي للشريط
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                if (progress < 90) {  // نتوقف عند 90% حتى نحصل على الرد
+                    progress += 1;
+                    progressBarFill.style.width = `${progress}%`;
+                }
+            }, 100);
+
+            const formData = new FormData();
+            formData.append('audio', audioBlob, 'recording.mp3');
+
+            fetch('process_audio/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken'),
+                    'X-API-Key': String(localStorage.getItem('apiKey'))
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // إيقاف التحديث التدريجي وإكمال الشريط
+                clearInterval(progressInterval);
+                progressBarFill.style.width = '100%';
+                
+                if (data.status === 'success') {
+                    createMessageElement(data.user);
+                    processMarkdownResponse(data.data,data.sql_query);
+                } else {
+                    processMarkdownResponse(data.message || 'حدث خطأ غير معروف');
+                }
+                
+                // إخفاء شريط التقدم بعد اكتمال العملية
+                setTimeout(() => {
+                    progressBar.style.display = 'none';
+                    progressBarFill.style.width = '0%';
+                }, 1000);
+            })
+            .catch(error => {
+                clearInterval(progressInterval);
+                console.error('Error:', error);
+                if (!apiInput.value) {
+                    processMarkdownResponse('عذراً، يجب إدخال مفتاح API الخاص بـ OpenAI للمتابعة');
+                } else {
+                processMarkdownResponse('عذراً، حدث خطأ في معالجة طلبك');
+                }
+                progressBar.style.display = 'none';
+            })
+            .finally(() => {
+                isProcessing = false;
+                voiceButton.disabled = false;
+            });
+        }
+
+        // دالة إرسال الاستعلام النصي
+        function sendQuery(query) {
+            
+            const progressBar = document.getElementById('progressBar');
+            const progressBarFill = progressBar.querySelector('.progress-bar');
+            
+            // عرض شريط التقدم وبدء التحديث التدريجي
+            progressBar.style.display = 'block';
+            progressBarFill.style.width = '0%';
+            
+            // بدء التحديث التدريجي للشريط
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                if (progress < 90) {  // نتوقف عند 90% حتى نحصل على الرد
+                    progress += 1;
+                    progressBarFill.style.width = `${progress}%`;
+                }
+            }, 100);
+
+
+            $.ajax({
+                url: 'process_query/',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ 
+                    query: query, 
+                    api_key: localStorage.getItem('apiKey') 
+                }),
+                success: function(response) {
+                     // إيقاف التحديث التدريجي وإكمال الشريط
+                clearInterval(progressInterval);
+                progressBarFill.style.width = '100%';
+
+                    if (response.status === 'success') {
+                        processMarkdownResponse(response.data, response.sql_query);
+                    } else {
+                        processMarkdownResponse(response.message || 'حدث خطأ غير معروف');
+                    }
+                                    // إخفاء شريط التقدم بعد اكتمال العملية
+                setTimeout(() => {
+                    progressBar.style.display = 'none';
+                    progressBarFill.style.width = '0%';
+                }, 1000);
+                },
+                error: function(xhr, status, error) {
+                    if (!apiInput.value) {
+                        processMarkdownResponse('عذراً، يجب إدخال مفتاح API الخاص بـ OpenAI للمتابعة');
+                    } else {
+                        processMarkdownResponse('عذراً، حدث خطأ في معالجة طلبك');
+                    }
+                }
+            });
+        }
+
+        // دالة إنشاء رسالة جديدة
+        function createMessageElement(text, type = 'user-message', label = 'السؤال') {
+            const emptyState = messagesGrid.querySelector('.empty-state');
+            if (emptyState) {
+                emptyState.remove();
+            }
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message-bubble ${type}`;
+
+            messageDiv.className = `message-bubble ${type}`;
+
+messageDiv.innerHTML = `
+        <div class="message-label">${label}</div>
+        
+        <div class="message-container" style="display: flex; align-items: flex-start; gap: 12px;">
+            <div class="user-avatar" style="width: 45px; height: 45px; border-radius: 50%;  display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-user-circle" style="font-size: 28px; "></i>
+            </div>
+            <div style="flex: 1;">
+                <div class="starfox-cards" id="cards-4qcLSK" style="background: transparent; border-radius: 15px 15px 15px 0; max-width: 80%;">
+                    <div class="starfox-card" id="card-y9T5F2" style="border-radius: inherit;">
+                        <div class="starfox-card__content" style="padding: 12px 15px;">
+                            <p class="starfox-paragraph starfox-paragraph--md" id="paragraph-G1HycM" style="margin: 0;">
+                                ${text}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-time" style="font-size: 12px; color: #666; margin-top: 4px;">
+                    ${new Date().toLocaleTimeString()}
+                </div>
+            </div>
+        </div>
+`;
+
+            messagesGrid.appendChild(messageDiv);
+            messageDiv.scrollIntoView({ behavior: 'smooth' });
+
+}
+
+    
+// تحديث دالة addMessage
+async function addMessage(text) {
+    try {
+        // إنشاء رسالة المستخدم
+        createMessageElement(text, 'user-message', 'السؤال');
+        
+        // إرسال الاستعلام
+        await sendQuery(text);
+    } catch (error) {
+        console.error('Error in addMessage:', error);
+        if (!apiInput.value) {
+                processMarkdownResponse('عذراً، يجب إدخال مفتاح API الخاص بـ OpenAI للمتابعة');
+        } else {
+            processMarkdownResponse('عذراً، حدث خطأ في معالجة طلبك');
+        }
+    }
+}
+        
+        // دالة إيقاف التسجيل
+        function stopRecording() {
+            if (mediaRecorder && isRecording) {
+                isRecording = false;
+                mediaRecorder.stop();
+            }
+        }
+
+        // تحديث دالة تبديل حالة التسجيل
+        function toggleRecording() {
+            const micIcon = voiceButton.querySelector('i');
+            
+            if (isProcessing) return;
+            
+            if (!isRecording) {
+                navigator.mediaDevices.getUserMedia({ 
+                    audio: {
+                        channelCount: 1,
+                        sampleRate: 44100,
+                        sampleSize: 16
+                    } 
+                })
+                .then(stream => {
+                    isRecording = true;
+                    voiceButton.style.background = 'linear-gradient(135deg, #c95959 0%, #ff8d8d 100%)';
+                    micIcon.style.color = '#fff';
+
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    
+                    mediaRecorder.ondataavailable = (event) => {
+                        if (event.data.size > 0) {
+                            audioChunks.push(event.data);
+                        }
+                    };
+                    
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/mp3' });
+                        sendAudio(audioBlob);
+                        voiceButton.style.background = 'linear-gradient(135deg, #c95959 0%, #af2929 100%)';
+                        micIcon.style.color = '#fff';
+
+                        
+                        stream.getTracks().forEach(track => track.stop());
+                    };
+                    
+                    mediaRecorder.start();
+                    setTimeout(() => {
+                        if (isRecording) {
+                            stopRecording();
+                        }
+                    }, 10000); // الحد الأقصى للتسجيل 10 ثواني
+                })
+                .catch(error => {
+                    console.error('Error accessing microphone:', error);
+                    processMarkdownResponse('عذراً، لا يمكن الوصول إلى الميكروفون');
+                    isProcessing = false;
+                });
+            } else {
+                stopRecording();
+            }
+        }
+
+        // إضافة دالة للحصول على CSRF token
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        // تحديث مستمعات الأحداث للزر
+        voiceButton.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            if (!isRecording) {
+                toggleRecording();
+            }
+        });
+
+        voiceButton.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            if (isRecording) {
+                stopRecording();
+            }
+        });
+
+        // مستمعات أحداث زر التسجيل
+        voiceButton.addEventListener('click', toggleRecording);
+
+        voiceButton.addEventListener('mousedown', function(e) {
+            pressTimer = setTimeout(() => {
+                toggleRecording();
+            }, 200);
+        });
+
+        voiceButton.addEventListener('mouseup', function(e) {
+            clearTimeout(pressTimer);
+            if (isRecording) {
+                stopRecording();
+            }
+        });
+
+        voiceButton.addEventListener('mouseleave', function(e) {
+            clearTimeout(pressTimer);
+            if (isRecording) {
+                stopRecording();
+            }
+        });        
+</script>
+
+
+
+</body>
+</html>
