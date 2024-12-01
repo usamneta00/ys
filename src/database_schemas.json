@@ -1,0 +1,4437 @@
+{
+    "GLS_PST_AI_VW": {
+        "table_name": "GLS_PST_AI_VW",
+        "columns": {
+            "ac_f_nm": {
+                "name": "AC_F_NM",
+                "type": "VARCHAR2",
+                "description": "اللغة الأجنبية أو اسم التنسيق للحساب.",
+                "caption_det": "اسم الحساب الأجنبي",
+                "caption_det_en": "Foreign Account Name",
+                "description_en": "Foreign language or format name of the account."
+            },
+            "ac_typ": {
+                "name": "AC_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of account."
+            },
+            "is_opn_blnc": {
+                "name": "IS_OPN_BLNC",
+                "type": "VARCHAR2",
+                "description": "منطقية تشير إلى ما إذا كان الرصيد رصيدًا افتتاحيًا.",
+                "caption_det": "رصيد إفتتاحي أم لا",
+                "caption_det_en": "Opening Balance Or Not",
+                "description_en": "Boolean indicating if the balance is an opening balance."
+            },
+            "is_crncy_dfrnc": {
+                "name": "IS_CRNCY_DFRNC",
+                "type": "VARCHAR2",
+                "description": "منطقية تشير إلى ما إذا كان هناك فرق في العملة.",
+                "caption_det": "فروق عملة أم لا",
+                "caption_det_en": "Currency Differences Or Not",
+                "description_en": "Boolean indicating if there is a currency difference."
+            },
+            "ac_code_dtl": {
+                "name": "AC_CODE_DTL",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب التفصيلي.",
+                "caption_det": "رقم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Number",
+                "description_en": "Detailed account code."
+            },
+            "ac_dtl_nm": {
+                "name": "AC_DTL_NM",
+                "type": "VARCHAR2",
+                "description": "اسم الحساب التفصيلي.",
+                "caption_det": "اسم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Name",
+                "description_en": "Detailed account name."
+            },
+            "ac_dtl_typ": {
+                "name": "AC_DTL_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب التفصيلي.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of detailed account."
+            },
+            "cur_code": {
+                "name": "CUR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العملة المستخدم في المعاملة.",
+                "caption_det": "رمز العملة",
+                "caption_det_en": "Currency Code",
+                "description_en": "Currency code used in the transaction."
+            },
+            "doc_no": {
+                "name": "DOC_NO",
+                "type": "NUMBER",
+                "description": "رقم الوثيقة.",
+                "caption_det": "رقم الوثيقة",
+                "caption_det_en": "Document Number",
+                "description_en": "Document number."
+            },
+            "doc_date": {
+                "name": "DOC_DATE",
+                "type": "DATE",
+                "description": "تاريخ الوثيقة.",
+                "caption_det": "تاريخ الوثيقة",
+                "caption_det_en": "Document Date",
+                "description_en": "Date of the document."
+            },
+            "gl_date": {
+                "name": "GL_DATE",
+                "type": "DATE",
+                "description": "تاريخ دفتر الأستاذ العام المتعلق بالمستند.",
+                "caption_det": "تاريخ الوثيقة في الحسابات",
+                "caption_det_en": "Document Date In Accounts",
+                "description_en": "General ledger date related to the document."
+            },
+            "doc_typ_nm": {
+                "name": "DOC_TYP_NM",
+                "type": "VARCHAR2",
+                "description": "اسم نوع الوثيقة.",
+                "caption_det": "اسم نوع الوثيقة",
+                "caption_det_en": "Document Type Name",
+                "description_en": "Name of the document type."
+            },
+            "sman_code": {
+                "name": "SMAN_CODE",
+                "type": "VARCHAR2",
+                "description": "كود البائع .",
+                "caption_det": "رقم المندوب",
+                "caption_det_en": "Representative Number",
+                "description_en": "Salesman code."
+            },
+            "sman_code_nm": {
+                "name": "SMAN_CODE_NM",
+                "type": "VARCHAR2",
+                "description": "اسم البائع المطابق لرمز البائع.",
+                "caption_det": "اسم المندوب",
+                "caption_det_en": "Name Of The Delegate",
+                "description_en": "Salesman name corresponding to the salesman code."
+            },
+            "clctr_code": {
+                "name": "CLCTR_CODE",
+                "type": "NUMBER",
+                "description": "رمز المجمع.",
+                "caption_det": "رقم المحصل",
+                "caption_det_en": "Collector Number",
+                "description_en": "Collector code."
+            },
+            "clctr_code_nm": {
+                "name": "CLCTR_CODE_NM",
+                "type": "VARCHAR2",
+                "description": "اسم المجمع المطابق لرمز المجمع.",
+                "caption_det": "اسم المحصل",
+                "caption_det_en": "The Name Of The Collector",
+                "description_en": "Collector name corresponding to the collector code."
+            },
+            "ref_no": {
+                "name": "REF_NO",
+                "type": "VARCHAR2",
+                "description": "الرقم المرجعي.",
+                "caption_det": "رقم المرجع",
+                "caption_det_en": "Reference Number",
+                "description_en": "Reference number."
+            },
+            "mnl_no": {
+                "name": "MNL_NO",
+                "type": "VARCHAR2",
+                "description": "رقم الدليل المخصص للمستند.",
+                "caption_det": "الرقم اليدوي",
+                "caption_det_en": "The Manual Number",
+                "description_en": "Manual number assigned to the document."
+            },
+            "doc_desc": {
+                "name": "DOC_DESC",
+                "type": "VARCHAR2",
+                "description": "وصف الوثيقة.",
+                "caption_det": "البيان",
+                "caption_det_en": "The Statement",
+                "description_en": "Description of the document."
+            },
+            "dr_amt_l": {
+                "name": "DR_AMT_L",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم بالعملة المحلية.",
+                "caption_det": "مدين محلي",
+                "caption_det_en": "Local City",
+                "description_en": "Debit amount in local currency."
+            },
+            "dr_amt_f": {
+                "name": "DR_AMT_F",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم بالعملة الأجنبية.",
+                "caption_det": "مدين أجنبي",
+                "caption_det_en": "Foreign City",
+                "description_en": "Debit amount in foreign currency."
+            },
+            "cr_amt_l": {
+                "name": "CR_AMT_L",
+                "type": "NUMBER",
+                "description": "مبلغ الائتمان بالعملة المحلية.",
+                "caption_det": "دائن محلي",
+                "caption_det_en": "Local Creditor",
+                "description_en": "Credit amount in local currency."
+            },
+            "cr_amt_f": {
+                "name": "CR_AMT_F",
+                "type": "NUMBER",
+                "description": "مبلغ الائتمان بالعملة الأجنبية.",
+                "caption_det": "دائن أجنبي",
+                "caption_det_en": "Foreign Creditor",
+                "description_en": "Credit amount in foreign currency."
+            }
+        }
+    },
+    "SALES_BILL_ANALYSIS_AI_VW": {
+        "table_name": "SALES_BILL_ANALYSIS_AI_VW",
+        "columns": {
+            "typ_no": {
+                "name": "TYP_NO",
+                "type": "NUMBER",
+                "description": "اكتب الرقم المتعلق بالمستند.",
+                "caption_det": "رقم النوع",
+                "caption_det_en": "Type Number",
+                "description_en": "Type number related to the document."
+            },
+            "doc_no": {
+                "name": "DOC_NO",
+                "type": "NUMBER",
+                "description": "رقم الوثيقة.",
+                "caption_det": "رقم الوثيقة",
+                "caption_det_en": "Document Number",
+                "description_en": "Document number."
+            },
+            "doc_srl": {
+                "name": "DOC_SRL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "التسلسل",
+                "caption_det_en": "The Sequence",
+                "description_en": ""
+            },
+            "doc_date": {
+                "name": "DOC_DATE",
+                "type": "DATE",
+                "description": "تاريخ الوثيقة.",
+                "caption_det": "تاريخ الوثيقة",
+                "caption_det_en": "Document Date",
+                "description_en": "Date of the document."
+            },
+            "mnl_date": {
+                "name": "MNL_DATE",
+                "type": "DATE",
+                "description": "",
+                "caption_det": "التاريخ اليدوي",
+                "caption_det_en": "The Manual History",
+                "description_en": ""
+            },
+            "cur_code": {
+                "name": "CUR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العملة المستخدم في المعاملة.",
+                "caption_det": "رمز العملة",
+                "caption_det_en": "Currency Code",
+                "description_en": "Currency code used in the transaction."
+            },
+            "cur_rate": {
+                "name": "CUR_RATE",
+                "type": "NUMBER",
+                "description": "سعر صرف العملة.",
+                "caption_det": "سعر صرف الحساب",
+                "caption_det_en": "Exchange Rate Of The Account",
+                "description_en": "Currency exchange rate."
+            },
+            "stk_rate": {
+                "name": "STK_RATE",
+                "type": "NUMBER",
+                "description": "سعر السهم.",
+                "caption_det": "سعر صرف المخزن",
+                "caption_det_en": "The Exchange Rate Of The Warehouse",
+                "description_en": "Stock rate."
+            },
+            "wrhs_code": {
+                "name": "WRHS_CODE",
+                "type": "NUMBER",
+                "description": "رمز المستودع.",
+                "caption_det": "رقم المخزن",
+                "caption_det_en": "Warehouse Number",
+                "description_en": "Warehouse code."
+            },
+            "unt_no": {
+                "name": "UNT_NO",
+                "type": "NUMBER",
+                "description": "رقم الوحدة.",
+                "caption_det": "رقم الوحدة المحاسبية",
+                "caption_det_en": "Accounting Unit Number",
+                "description_en": "Unit number."
+            },
+            "pymnt_csh": {
+                "name": "PYMNT_CSH",
+                "type": "NUMBER",
+                "description": "الدفع بمبلغ نقدي.",
+                "caption_det": "طريقة دفع نقد",
+                "caption_det_en": "Cash Payment Method",
+                "description_en": "Payment in cash amount."
+            },
+            "pymnt_bnk": {
+                "name": "PYMNT_BNK",
+                "type": "NUMBER",
+                "description": "تم الدفع عن طريق البنك .",
+                "caption_det": "طريقة دفع بنك",
+                "caption_det_en": "Bank Payment Method",
+                "description_en": "Payment made via bank."
+            },
+            "pymnt_crdt": {
+                "name": "PYMNT_CRDT",
+                "type": "NUMBER",
+                "description": "الدفع على الائتمان.",
+                "caption_det": "طريقة دفع أجل",
+                "caption_det_en": "Payment Method Deferred",
+                "description_en": "Payment on credit."
+            },
+            "pymnt_cpn": {
+                "name": "PYMNT_CPN",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع كوبون",
+                "caption_det_en": "Coupon Payment Method",
+                "description_en": ""
+            },
+            "pymnt_ac": {
+                "name": "PYMNT_AC",
+                "type": "NUMBER",
+                "description": "الدفع في الحساب.",
+                "caption_det": "طريقة دفع حساب",
+                "caption_det_en": "Payment Method",
+                "description_en": "Payment in an account."
+            },
+            "pymnt_point_rplc": {
+                "name": "PYMNT_POINT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع  إستبدال نقاط",
+                "caption_det_en": "Payment Method For Redeeming Points",
+                "description_en": ""
+            },
+            "pymnt_rplc": {
+                "name": "PYMNT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع إستبدال",
+                "caption_det_en": "Payment Method For Exchange",
+                "description_en": ""
+            },
+            "cstmr_code": {
+                "name": "CSTMR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العميل.",
+                "caption_det": "رقم العميل",
+                "caption_det_en": "Client Number",
+                "description_en": "Customer code."
+            },
+            "cstmr_nm": {
+                "name": "CSTMR_NM",
+                "type": "VARCHAR2",
+                "description": "اسم العميل.",
+                "caption_det": "اسم العميل",
+                "caption_det_en": "Client Name",
+                "description_en": "Customer name."
+            },
+            "cstmr_mobile": {
+                "name": "CSTMR_MOBILE",
+                "type": "VARCHAR2",
+                "description": "رقم الهاتف المحمول للعميل.",
+                "caption_det": "رقم الجوال",
+                "caption_det_en": "Mobile Number",
+                "description_en": "Customer mobile number."
+            },
+            "ac_code_dtl_sub_cst": {
+                "name": "AC_CODE_DTL_SUB_CST",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المستفيد",
+                "caption_det_en": "Beneficiary Number",
+                "description_en": ""
+            },
+            "csh_code": {
+                "name": "CSH_CODE",
+                "type": "NUMBER",
+                "description": "رمز النقدية.",
+                "caption_det": "رقم الصندوق",
+                "caption_det_en": "Box Number",
+                "description_en": "Cash code."
+            },
+            "bnk_code": {
+                "name": "BNK_CODE",
+                "type": "NUMBER",
+                "description": "رمز البنك.",
+                "caption_det": "رقم البنك",
+                "caption_det_en": "Bank Number",
+                "description_en": "Bank code."
+            },
+            "ac_code_dtl_sub_bnk": {
+                "name": "AC_CODE_DTL_SUB_BNK",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي للبنك.",
+                "caption_det": "رقم البنك الفرعي",
+                "caption_det_en": "Sub Bank Number",
+                "description_en": "Bank sub-account code detail."
+            },
+            "ac_code": {
+                "name": "AC_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب أو الرقم المرتبط بالمعاملة.",
+                "caption_det": "رقم الحساب",
+                "caption_det_en": "Account Number",
+                "description_en": "Account code or number associated with the transaction."
+            },
+            "ac_code_dtl": {
+                "name": "AC_CODE_DTL",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب التفصيلي.",
+                "caption_det": "رقم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Number",
+                "description_en": "Detailed account code."
+            },
+            "ac_dtl_typ": {
+                "name": "AC_DTL_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب التفصيلي.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of detailed account."
+            },
+            "ac_code_dtl_sub": {
+                "name": "AC_CODE_DTL_SUB",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي.",
+                "caption_det": "رقم الحساب التحليلي الفرعي",
+                "caption_det_en": "Sub Analytical Account Number",
+                "description_en": "Sub-account code detail."
+            },
+            "csh_amt": {
+                "name": "CSH_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع نقدا.",
+                "caption_det": "المبلغ النقدى",
+                "caption_det_en": "The Cash Amount",
+                "description_en": "Amount paid in cash."
+            },
+            "bnk_amt": {
+                "name": "BNK_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع عن طريق البنك .",
+                "caption_det": "مبلغ البنك",
+                "caption_det_en": "Bank Amount",
+                "description_en": "Amount paid via bank."
+            },
+            "crdt_amt": {
+                "name": "CRDT_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع على الائتمان.",
+                "caption_det": "المبلغ الأجل",
+                "caption_det_en": "The Amount Is Due",
+                "description_en": "Amount paid on credit."
+            },
+            "cpn_amt": {
+                "name": "CPN_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكوبون",
+                "caption_det_en": "The Coupon Amount",
+                "description_en": ""
+            },
+            "ac_amt": {
+                "name": "AC_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الحساب.",
+                "caption_det": "مبلغ الحساب",
+                "caption_det_en": "Account Amount",
+                "description_en": "Account amount."
+            },
+            "rplc_amt": {
+                "name": "RPLC_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الاستبدال",
+                "caption_det_en": "The Replacement Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc": {
+                "name": "POINT_AMT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الاستبدال",
+                "caption_det_en": "Amount Of Redemption Points",
+                "description_en": ""
+            },
+            "doc_amt": {
+                "name": "DOC_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للوثيقة.",
+                "caption_det": "مبلغ الوثيقة",
+                "caption_det_en": "Document Amount",
+                "description_en": "Total document amount."
+            },
+            "dscnt_amt": {
+                "name": "DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount."
+            },
+            "othr_amt": {
+                "name": "OTHR_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ أو رسوم أخرى.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "The Amount Of Burdens",
+                "description_en": "Other amount or charges."
+            },
+            "tax_amt": {
+                "name": "TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "Tax Amount",
+                "description_en": "Tax amount."
+            },
+            "dscnt_amt_add": {
+                "name": "DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم الإضافي.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount."
+            },
+            "csh_amt_local": {
+                "name": "CSH_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "المبلغ النقدي المحلي",
+                "caption_det_en": "The Local Cash Amount",
+                "description_en": ""
+            },
+            "bnk_amt_local": {
+                "name": "BNK_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ البنك المحلي",
+                "caption_det_en": "Local Bank Amount",
+                "description_en": ""
+            },
+            "crdt_amt_local": {
+                "name": "CRDT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الأجل المحلي",
+                "caption_det_en": "The Amount Of The Local Term",
+                "description_en": ""
+            },
+            "cpn_amt_local": {
+                "name": "CPN_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكويون المحلي",
+                "caption_det_en": "The Amount Of The Local Currency",
+                "description_en": ""
+            },
+            "ac_amt_local": {
+                "name": "AC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الحساب المحلي",
+                "caption_det_en": "The Amount Of The Local Account",
+                "description_en": ""
+            },
+            "rplc_amt_local": {
+                "name": "RPLC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الإستبدال المحلي",
+                "caption_det_en": "Local Exchange Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc_local": {
+                "name": "POINT_AMT_RPLC_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الإستبدال المحلي",
+                "caption_det_en": "Amount Of Local Redemption Points",
+                "description_en": ""
+            },
+            "totl_bill_amt": {
+                "name": "TOTL_BILL_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الفاتورة.",
+                "caption_det": "إجمالي مبلغ الفاتورة",
+                "caption_det_en": "Total Amount Of The Invoice",
+                "description_en": "Total bill amount."
+            },
+            "totl_bill_amt_local": {
+                "name": "TOTL_BILL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي مبلغ الفاتورة المحلي",
+                "caption_det_en": "Total Amount Of The Local Invoice",
+                "description_en": ""
+            },
+            "sman_code": {
+                "name": "SMAN_CODE",
+                "type": "VARCHAR2",
+                "description": "كود البائع .",
+                "caption_det": "رقم المندوب",
+                "caption_det_en": "Representative Number",
+                "description_en": "Salesman code."
+            },
+            "mrktr_code": {
+                "name": "MRKTR_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المسوق",
+                "caption_det_en": "Marketer Number",
+                "description_en": ""
+            },
+            "clctr_code": {
+                "name": "CLCTR_CODE",
+                "type": "NUMBER",
+                "description": "رمز المجمع.",
+                "caption_det": "رقم المحصل",
+                "caption_det_en": "Collector Number",
+                "description_en": "Collector code."
+            },
+            "emp_code": {
+                "name": "EMP_CODE",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم الموظف",
+                "caption_det_en": "Employee Number",
+                "description_en": ""
+            },
+            "drvr_no": {
+                "name": "DRVR_NO",
+                "type": "NUMBER",
+                "description": "رقم السائق.",
+                "caption_det": "رقم السائق",
+                "caption_det_en": "Driver Number",
+                "description_en": "Driver number."
+            },
+            "rgn_no": {
+                "name": "RGN_NO",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم المنطقة",
+                "caption_det_en": "Area Number",
+                "description_en": ""
+            },
+            "sub_ldgr1_code": {
+                "name": "SUB_LDGR1_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم مركز التكلفة",
+                "caption_det_en": "Cost Center Number",
+                "description_en": ""
+            },
+            "sub_ldgr2_code": {
+                "name": "SUB_LDGR2_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المشروع",
+                "caption_det_en": "Project Number",
+                "description_en": ""
+            },
+            "sub_ldgr3_code": {
+                "name": "SUB_LDGR3_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم النشاط",
+                "caption_det_en": "Activity Number",
+                "description_en": ""
+            },
+            "sub_ldgr4_code": {
+                "name": "SUB_LDGR4_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل لفرعى الرابع",
+                "caption_det_en": "The Guide To The Fourth Branch",
+                "description_en": ""
+            },
+            "sub_ldgr5_code": {
+                "name": "SUB_LDGR5_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعى الخامس",
+                "caption_det_en": "The Fifth Sub-Guide",
+                "description_en": ""
+            },
+            "sub_ldgr6_code": {
+                "name": "SUB_LDGR6_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي السادس",
+                "caption_det_en": "The Sixth Sub Guide",
+                "description_en": ""
+            },
+            "tax_code": {
+                "name": "TAX_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الضريبة.",
+                "caption_det": "رمز الضريبة",
+                "caption_det_en": "Tax Code",
+                "description_en": "Tax code."
+            },
+            "doc_due_date": {
+                "name": "DOC_DUE_DATE",
+                "type": "DATE",
+                "description": "تاريخ استحقاق الوثيقة.",
+                "caption_det": "تاريخ الإستحقاق",
+                "caption_det_en": "Due Date",
+                "description_en": "Due date for the document."
+            },
+            "doc_dsc": {
+                "name": "DOC_DSC",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "البيان",
+                "caption_det_en": "The Statement",
+                "description_en": ""
+            },
+            "ref_no": {
+                "name": "REF_NO",
+                "type": "VARCHAR2",
+                "description": "الرقم المرجعي.",
+                "caption_det": "رقم المرجع",
+                "caption_det_en": "Reference Number",
+                "description_en": "Reference number."
+            },
+            "mnl_no": {
+                "name": "MNL_NO",
+                "type": "VARCHAR2",
+                "description": "رقم الدليل المخصص للمستند.",
+                "caption_det": "الرقم اليدوي",
+                "caption_det_en": "The Manual Number",
+                "description_en": "Manual number assigned to the document."
+            },
+            "chq_note_no": {
+                "name": "CHQ_NOTE_NO",
+                "type": "NUMBER",
+                "description": "رقم الشيك أو الملاحظة.",
+                "caption_det": "رقم الإشعار",
+                "caption_det_en": "Notification Number",
+                "description_en": "Cheque or note number."
+            },
+            "chq_note_date": {
+                "name": "CHQ_NOTE_DATE",
+                "type": "DATE",
+                "description": "تاريخ الشيك أو الملاحظة.",
+                "caption_det": "تاريخ الإشعار",
+                "caption_det_en": "Date Of Notification",
+                "description_en": "Date of cheque or note."
+            },
+            "comm_prcnt": {
+                "name": "COMM_PRCNT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نسبة العمولة",
+                "caption_det_en": "Commission Rate",
+                "description_en": ""
+            },
+            "tax_ctgry_no": {
+                "name": "TAX_CTGRY_NO",
+                "type": "NUMBER",
+                "description": "رقم الفئة الضريبية.",
+                "caption_det": "طريقة إحتساب الضريبة",
+                "caption_det_en": "Method Of Calculating The Tax",
+                "description_en": "Tax category number."
+            },
+            "tax_bill_typ": {
+                "name": "TAX_BILL_TYP",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نوع الفاتورة الضريبي",
+                "caption_det_en": "Type Of Tax Invoice",
+                "description_en": ""
+            },
+            "clc_tax_free_qty_flg": {
+                "name": "CLC_TAX_FREE_QTY_FLG",
+                "type": "NUMBER",
+                "description": "وضع علامة لحساب الكمية المعفاة من الضرائب.",
+                "caption_det": "طريقة إحتساب ضريبة الكميات المجانية",
+                "caption_det_en": "The Method Of Calculating The Tax On Free Quantities",
+                "description_en": "Flag to calculate tax-free quantity."
+            },
+            "vrfy_flg": {
+                "name": "VRFY_FLG",
+                "type": "NUMBER",
+                "description": "علامة التحقق.",
+                "caption_det": "مؤشر المراجعة",
+                "caption_det_en": "Review Index",
+                "description_en": "Verification flag."
+            },
+            "stndby_flg": {
+                "name": "STNDBY_FLG",
+                "type": "NUMBER",
+                "description": "علم الاستعداد.",
+                "caption_det": "مؤشر التعليق",
+                "caption_det_en": "Comment Indicator",
+                "description_en": "Standby flag."
+            },
+            "pst_flg": {
+                "name": "PST_FLG",
+                "type": "NUMBER",
+                "description": "نشر العلم.",
+                "caption_det": "مؤشر الترحيل",
+                "caption_det_en": "Migration Index",
+                "description_en": "Posting flag."
+            },
+            "yr_no": {
+                "name": "YR_NO",
+                "type": "NUMBER",
+                "description": "رقم السنة.",
+                "caption_det": "السنة",
+                "caption_det_en": "The Year",
+                "description_en": "Year number."
+            },
+            "crt_usr": {
+                "name": "CRT_USR",
+                "type": "NUMBER",
+                "description": "تم إنشاؤها بواسطة المستخدم.",
+                "caption_det": "رقم المستخدم مدخل السجل",
+                "caption_det_en": "User Number Record Entry",
+                "description_en": "Created by user."
+            },
+            "crt_date": {
+                "name": "CRT_DATE",
+                "type": "DATE",
+                "description": "تاريخ الإنشاء.",
+                "caption_det": "تاريخ الإدخال",
+                "caption_det_en": "Entry Date",
+                "description_en": "Creation date."
+            },
+            "itm_code": {
+                "name": "ITM_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز السلعة.",
+                "caption_det": "رقم الصنف",
+                "caption_det_en": "Item Number",
+                "description_en": "Item code."
+            },
+            "itm_unt": {
+                "name": "ITM_UNT",
+                "type": "VARCHAR2",
+                "description": "وحدة السلعة.",
+                "caption_det": "الوحدة",
+                "caption_det_en": "The Unity",
+                "description_en": "Item unit."
+            },
+            "itm_sz": {
+                "name": "ITM_SZ",
+                "type": "NUMBER",
+                "description": "حجم السلعة.",
+                "caption_det": "العبوة",
+                "caption_det_en": "The Container",
+                "description_en": "Item size."
+            },
+            "exp_date": {
+                "name": "EXP_DATE",
+                "type": "DATE",
+                "description": "تاريخ انتهاء صلاحية السلعة.",
+                "caption_det": "تاريخ الإنتهاء",
+                "caption_det_en": "Expiration Date",
+                "description_en": "Item expiration date."
+            },
+            "itm_sgmnt_cntct": {
+                "name": "ITM_SGMNT_CNTCT",
+                "type": "VARCHAR2",
+                "description": "جهة اتصال شريحة العنصر.",
+                "caption_det": "رقم الدفعة",
+                "caption_det_en": "Batch Number",
+                "description_en": "Item segment contact."
+            },
+            "itm_qty": {
+                "name": "ITM_QTY",
+                "type": "NUMBER",
+                "description": "كمية السلعة.",
+                "caption_det": "الكمية",
+                "caption_det_en": "The Quantity",
+                "description_en": "Item quantity."
+            },
+            "itm_free_qty": {
+                "name": "ITM_FREE_QTY",
+                "type": "NUMBER",
+                "description": "كمية مجانية من السلعة.",
+                "caption_det": "الكمية المجانية",
+                "caption_det_en": "The Free Quantity",
+                "description_en": "Free quantity of the item."
+            },
+            "itm_free_qty_add": {
+                "name": "ITM_FREE_QTY_ADD",
+                "type": "NUMBER",
+                "description": "كمية إضافية مجانية من السلعة.",
+                "caption_det": "الكمية المجانية الإضافية",
+                "caption_det_en": "The Additional Free Quantity",
+                "description_en": "Additional free quantity of the item."
+            },
+            "itm_totl_qty": {
+                "name": "ITM_TOTL_QTY",
+                "type": "NUMBER",
+                "description": "الكمية الإجمالية للعنصر.",
+                "caption_det": "إجمالي الكمية",
+                "caption_det_en": "Total Quantity",
+                "description_en": "Total quantity of the item."
+            },
+            "itm_totl_free_qty": {
+                "name": "ITM_TOTL_FREE_QTY",
+                "type": "NUMBER",
+                "description": "إجمالي الكمية المجانية من السلعة.",
+                "caption_det": "إجمالي الكمية المجانية",
+                "caption_det_en": "Total Free Quantity",
+                "description_en": "Total free quantity of the item."
+            },
+            "itm_mn_qty": {
+                "name": "ITM_MN_QTY",
+                "type": "NUMBER",
+                "description": "الكمية الرئيسية للسلعة.",
+                "caption_det": "الكمية بالوحدة الصغيرة",
+                "caption_det_en": "The Quantity In The Small Unit",
+                "description_en": "Main quantity of the item."
+            },
+            "itm_mn_free_qty": {
+                "name": "ITM_MN_FREE_QTY",
+                "type": "NUMBER",
+                "description": "الكمية المجانية الرئيسية للصنف.",
+                "caption_det": "الكمية المجانية بالوحدة الصغيرة",
+                "caption_det_en": "The Free Quantity In The Small Unit",
+                "description_en": "Main free quantity of the item."
+            },
+            "itm_mn_free_qty_add": {
+                "name": "ITM_MN_FREE_QTY_ADD",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "الكمية الإضافية المجانية بالوحدة الصغيرة",
+                "caption_det_en": "The Free Additional Quantity In The Small Unit",
+                "description_en": ""
+            },
+            "itm_totl_mn_qty": {
+                "name": "ITM_TOTL_MN_QTY",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الكمية بالوحدة الصغيرة",
+                "caption_det_en": "Total Quantity In The Small Unit",
+                "description_en": ""
+            },
+            "itm_mn_totl_mn_free_qty": {
+                "name": "ITM_MN_TOTL_MN_FREE_QTY",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الكمية المجانية بالوحدة الصغيرة",
+                "caption_det_en": "Total Quantity Free In The Small Unit",
+                "description_en": ""
+            },
+            "itm_price": {
+                "name": "ITM_PRICE",
+                "type": "NUMBER",
+                "description": "سعر السلعة.",
+                "caption_det": "سعر الصنف",
+                "caption_det_en": "Item Price",
+                "description_en": "Price of the item."
+            },
+            "itm_stk_cst": {
+                "name": "ITM_STK_CST",
+                "type": "NUMBER",
+                "description": "تكلفة مخزون السلعة.",
+                "caption_det": "تكلفة الصنف",
+                "caption_det_en": "The Cost Of The Item",
+                "description_en": "Stock cost of the item."
+            },
+            "itm_tax_prcnt": {
+                "name": "ITM_TAX_PRCNT",
+                "type": "NUMBER",
+                "description": "نسبة الضريبة على السلعة.",
+                "caption_det": "نسبة الضريبة",
+                "caption_det_en": "Tax Rate",
+                "description_en": "Tax percentage on the item."
+            },
+            "itm_tax_amt": {
+                "name": "ITM_TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة على السلعة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "Tax Amount",
+                "description_en": "Tax amount on the item."
+            },
+            "itm_othr_chrg_amt": {
+                "name": "ITM_OTHR_CHRG_AMT",
+                "type": "NUMBER",
+                "description": "رسوم أخرى على هذا البند.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "Amount Of Burdens",
+                "description_en": "Other charges on the item."
+            },
+            "itm_dscnt_amt": {
+                "name": "ITM_DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم على السلعة.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount on the item."
+            },
+            "itm_dscnt_amt_add": {
+                "name": "ITM_DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ خصم إضافي على هذا البند.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount on the item."
+            },
+            "itm_totl_price": {
+                "name": "ITM_TOTL_PRICE",
+                "type": "NUMBER",
+                "description": "السعر الإجمالي للسلعة.",
+                "caption_det": "إجمالي سعر الصنف",
+                "caption_det_en": "Total Price Of The Item",
+                "description_en": "Total price of the item."
+            },
+            "itm_totl_dscnt_amt": {
+                "name": "ITM_TOTL_DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الخصم على السلعة.",
+                "caption_det": "إجمالي خصم الصنف",
+                "caption_det_en": "Total Item Discount",
+                "description_en": "Total discount amount on the item."
+            },
+            "itm_totl_othr_chrg_amt": {
+                "name": "ITM_TOTL_OTHR_CHRG_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي الرسوم الأخرى على هذا البند.",
+                "caption_det": "إجمالي أعباء الصنف",
+                "caption_det_en": "Total Burden Of The Item",
+                "description_en": "Total other charges on the item."
+            },
+            "itm_totl_tax_amt": {
+                "name": "ITM_TOTL_TAX_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الضريبة على السلعة.",
+                "caption_det": "إجمالي مبلغ  الضريبة",
+                "caption_det_en": "Total Amount Of The Tax",
+                "description_en": "Total tax amount on the item."
+            },
+            "itm_totl_dscnt_amt_add": {
+                "name": "ITM_TOTL_DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الخصم الإضافي على السلعة.",
+                "caption_det": "إجمالي مبلغ الخصومات الإضافية للصنف",
+                "caption_det_en": "Total Amount Of Additional Discounts For The Item",
+                "description_en": "Total additional discount amount on the item."
+            },
+            "itm_totl_amt": {
+                "name": "ITM_TOTL_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للعنصر.",
+                "caption_det": "إجمالي المبلغ",
+                "caption_det_en": "Total Amount",
+                "description_en": "Total amount of the item."
+            },
+            "itm_totl_stk_cst": {
+                "name": "ITM_TOTL_STK_CST",
+                "type": "NUMBER",
+                "description": "إجمالي تكلفة المخزون لهذا البند.",
+                "caption_det": "إجمالي تكلفة الصنف",
+                "caption_det_en": "Total Cost Of The Item",
+                "description_en": "Total stock cost of the item."
+            },
+            "itm_totl_price_local": {
+                "name": "ITM_TOTL_PRICE_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي سعر الصنف بالعملة المحلية",
+                "caption_det_en": "Total Price Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_dscnt_amt_local": {
+                "name": "ITM_TOTL_DSCNT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي خصم الصنف بالعملة المحلية",
+                "caption_det_en": "Total Discount Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_othr_amt_local": {
+                "name": "ITM_TOTL_OTHR_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي أعباء الصنف بالعملة المحلية",
+                "caption_det_en": "Total Burden Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_tax_amt_local": {
+                "name": "ITM_TOTL_TAX_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي ضريبة الصنف بالعملة المحلية",
+                "caption_det_en": "Total Tax Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_dscnt_amt_add_local": {
+                "name": "ITM_DSCNT_AMT_ADD_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الخصومات الإضافية للصنف بالعملة المحلية",
+                "caption_det_en": "Total Additional Discounts For The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_amt_local": {
+                "name": "ITM_TOTL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي المبلغ بالعملة المحلية",
+                "caption_det_en": "Total Amount In Local Currency",
+                "description_en": ""
+            },
+            "srvc_flg": {
+                "name": "SRVC_FLG",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "صنف خدمي",
+                "caption_det_en": "Service Category",
+                "description_en": ""
+            },
+            "doc_d_sq": {
+                "name": "DOC_D_SQ",
+                "type": "NUMBER",
+                "description": "تسلسل تفاصيل الوثيقة",
+                "caption_det": "تسلسل الصنف بالوثيقة",
+                "caption_det_en": "Item Sequence In The Document",
+                "description_en": "Document detail sequence."
+            }
+        }
+    },
+    "SALES_BILL_MST_AI_VW": {
+        "table_name": "SALES_BILL_MST_AI_VW",
+        "columns": {
+            "typ_no": {
+                "name": "TYP_NO",
+                "type": "NUMBER",
+                "description": "اكتب الرقم المتعلق بالمستند.",
+                "caption_det": "رقم النوع",
+                "caption_det_en": "Type Number",
+                "description_en": "Type number related to the document."
+            },
+            "doc_no": {
+                "name": "DOC_NO",
+                "type": "NUMBER",
+                "description": "رقم الوثيقة.",
+                "caption_det": "رقم الوثيقة",
+                "caption_det_en": "Document Number",
+                "description_en": "Document number."
+            },
+            "doc_srl": {
+                "name": "DOC_SRL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "تسلسل الوثيقة",
+                "caption_det_en": "Document Sequence",
+                "description_en": ""
+            },
+            "doc_date": {
+                "name": "DOC_DATE",
+                "type": "DATE",
+                "description": "تاريخ الوثيقة.",
+                "caption_det": "تاريخ الوثيقة",
+                "caption_det_en": "Document Date",
+                "description_en": "Date of the document."
+            },
+            "mnl_date": {
+                "name": "MNL_DATE",
+                "type": "DATE",
+                "description": "",
+                "caption_det": "التاريخ اليدوي",
+                "caption_det_en": "The Manual History",
+                "description_en": ""
+            },
+            "cur_code": {
+                "name": "CUR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العملة المستخدم في المعاملة.",
+                "caption_det": "رمز العملة",
+                "caption_det_en": "Currency Code",
+                "description_en": "Currency code used in the transaction."
+            },
+            "cur_rate": {
+                "name": "CUR_RATE",
+                "type": "NUMBER",
+                "description": "سعر صرف العملة.",
+                "caption_det": "سعر صرف الحساب",
+                "caption_det_en": "Exchange Rate Of The Account",
+                "description_en": "Currency exchange rate."
+            },
+            "stk_rate": {
+                "name": "STK_RATE",
+                "type": "NUMBER",
+                "description": "سعر السهم.",
+                "caption_det": "سعر صرف المخزن",
+                "caption_det_en": "The Exchange Rate Of The Warehouse",
+                "description_en": "Stock rate."
+            },
+            "wrhs_code": {
+                "name": "WRHS_CODE",
+                "type": "NUMBER",
+                "description": "رمز المستودع.",
+                "caption_det": "رقم المخزن",
+                "caption_det_en": "Warehouse Number",
+                "description_en": "Warehouse code."
+            },
+            "unt_no": {
+                "name": "UNT_NO",
+                "type": "NUMBER",
+                "description": "رقم الوحدة.",
+                "caption_det": "رقم الوحدة المحاسبية",
+                "caption_det_en": "Accounting Unit Number",
+                "description_en": "Unit number."
+            },
+            "pymnt_csh": {
+                "name": "PYMNT_CSH",
+                "type": "NUMBER",
+                "description": "الدفع بمبلغ نقدي.",
+                "caption_det": "طريقة دفع نقد",
+                "caption_det_en": "Cash Payment Method",
+                "description_en": "Payment in cash amount."
+            },
+            "pymnt_bnk": {
+                "name": "PYMNT_BNK",
+                "type": "NUMBER",
+                "description": "تم الدفع عن طريق البنك .",
+                "caption_det": "طريقة دفع بنك",
+                "caption_det_en": "Bank Payment Method",
+                "description_en": "Payment made via bank."
+            },
+            "pymnt_crdt": {
+                "name": "PYMNT_CRDT",
+                "type": "NUMBER",
+                "description": "الدفع على الائتمان.",
+                "caption_det": "طريقة دفع أجل",
+                "caption_det_en": "Payment Method Deferred",
+                "description_en": "Payment on credit."
+            },
+            "pymnt_cpn": {
+                "name": "PYMNT_CPN",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع كوبون",
+                "caption_det_en": "Coupon Payment Method",
+                "description_en": ""
+            },
+            "pymnt_ac": {
+                "name": "PYMNT_AC",
+                "type": "NUMBER",
+                "description": "الدفع في الحساب.",
+                "caption_det": "طريقة دفع حساب",
+                "caption_det_en": "Payment Method",
+                "description_en": "Payment in an account."
+            },
+            "pymnt_point_rplc": {
+                "name": "PYMNT_POINT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع  إستبدال نقاط",
+                "caption_det_en": "Payment Method For Redeeming Points",
+                "description_en": ""
+            },
+            "pymnt_rplc": {
+                "name": "PYMNT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع إستبدال",
+                "caption_det_en": "Method Of Payment For Exchange",
+                "description_en": ""
+            },
+            "cstmr_code": {
+                "name": "CSTMR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العميل.",
+                "caption_det": "رقم العميل",
+                "caption_det_en": "Customer Number",
+                "description_en": "Customer code."
+            },
+            "cstmr_nm": {
+                "name": "CSTMR_NM",
+                "type": "VARCHAR2",
+                "description": "اسم العميل.",
+                "caption_det": "اسم العميل",
+                "caption_det_en": "Client Name",
+                "description_en": "Customer name."
+            },
+            "cstmr_mobile": {
+                "name": "CSTMR_MOBILE",
+                "type": "VARCHAR2",
+                "description": "رقم الهاتف المحمول للعميل.",
+                "caption_det": "رقم الجوال",
+                "caption_det_en": "Mobile Number",
+                "description_en": "Customer mobile number."
+            },
+            "ac_code_dtl_sub_cst": {
+                "name": "AC_CODE_DTL_SUB_CST",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المستفيد",
+                "caption_det_en": "Beneficiary Number",
+                "description_en": ""
+            },
+            "csh_code": {
+                "name": "CSH_CODE",
+                "type": "NUMBER",
+                "description": "رمز النقدية.",
+                "caption_det": "رقم الصندوق",
+                "caption_det_en": "Box Number",
+                "description_en": "Cash code."
+            },
+            "bnk_code": {
+                "name": "BNK_CODE",
+                "type": "NUMBER",
+                "description": "رمز البنك.",
+                "caption_det": "رقم البنك",
+                "caption_det_en": "Bank Number",
+                "description_en": "Bank code."
+            },
+            "ac_code_dtl_sub_bnk": {
+                "name": "AC_CODE_DTL_SUB_BNK",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي للبنك.",
+                "caption_det": "رقم البنك الفرعي",
+                "caption_det_en": "Sub Bank Number",
+                "description_en": "Bank sub-account code detail."
+            },
+            "ac_code": {
+                "name": "AC_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب أو الرقم المرتبط بالمعاملة.",
+                "caption_det": "رقم الحساب",
+                "caption_det_en": "Account Number",
+                "description_en": "Account code or number associated with the transaction."
+            },
+            "ac_code_dtl": {
+                "name": "AC_CODE_DTL",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب التفصيلي.",
+                "caption_det": "رقم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Number",
+                "description_en": "Detailed account code."
+            },
+            "ac_dtl_typ": {
+                "name": "AC_DTL_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب التفصيلي.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of detailed account."
+            },
+            "ac_code_dtl_sub": {
+                "name": "AC_CODE_DTL_SUB",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي.",
+                "caption_det": "رقم الحساب التحليلي الفرعي",
+                "caption_det_en": "Sub-Analytical Account Number",
+                "description_en": "Sub-account code detail."
+            },
+            "csh_amt": {
+                "name": "CSH_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع نقدا.",
+                "caption_det": "المبلغ النقدى",
+                "caption_det_en": "The Cash Amount",
+                "description_en": "Amount paid in cash."
+            },
+            "bnk_amt": {
+                "name": "BNK_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع عن طريق البنك .",
+                "caption_det": "مبلغ البنك",
+                "caption_det_en": "Bank Amount",
+                "description_en": "Amount paid via bank."
+            },
+            "crdt_amt": {
+                "name": "CRDT_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع على الائتمان.",
+                "caption_det": "المبلغ الأجل",
+                "caption_det_en": "The Amount Of Time",
+                "description_en": "Amount paid on credit."
+            },
+            "cpn_amt": {
+                "name": "CPN_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكوبون",
+                "caption_det_en": "The Coupon Amount",
+                "description_en": ""
+            },
+            "ac_amt": {
+                "name": "AC_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الحساب.",
+                "caption_det": "مبلغ الحساب",
+                "caption_det_en": "Account Amount",
+                "description_en": "Account amount."
+            },
+            "rplc_amt": {
+                "name": "RPLC_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الاستبدال",
+                "caption_det_en": "The Replacement Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc": {
+                "name": "POINT_AMT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الاستبدال",
+                "caption_det_en": "Amount Of Redemption Points",
+                "description_en": ""
+            },
+            "doc_amt": {
+                "name": "DOC_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للوثيقة.",
+                "caption_det": "مبلغ الوثيقة",
+                "caption_det_en": "Document Amount",
+                "description_en": "Total document amount."
+            },
+            "dscnt_amt": {
+                "name": "DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount."
+            },
+            "othr_amt": {
+                "name": "OTHR_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ أو رسوم أخرى.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "Amount Of Burdens",
+                "description_en": "Other amount or charges."
+            },
+            "tax_amt": {
+                "name": "TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "Tax Amount",
+                "description_en": "Tax amount."
+            },
+            "dscnt_amt_add": {
+                "name": "DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم الإضافي.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount."
+            },
+            "csh_amt_local": {
+                "name": "CSH_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "المبلغ النقدي المحلي",
+                "caption_det_en": "The Local Cash Amount",
+                "description_en": ""
+            },
+            "bnk_amt_local": {
+                "name": "BNK_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ البنك المحلي",
+                "caption_det_en": "Local Bank Amount",
+                "description_en": ""
+            },
+            "crdt_amt_local": {
+                "name": "CRDT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الأجل المحلي",
+                "caption_det_en": "The Amount Of The Local Term",
+                "description_en": ""
+            },
+            "cpn_amt_local": {
+                "name": "CPN_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكويون المحلي",
+                "caption_det_en": "The Amount Of The Local Currency",
+                "description_en": ""
+            },
+            "ac_amt_local": {
+                "name": "AC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الحساب المحلي",
+                "caption_det_en": "Local Account Amount",
+                "description_en": ""
+            },
+            "rplc_amt_local": {
+                "name": "RPLC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الإستبدال المحلي",
+                "caption_det_en": "Local Exchange Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc_local": {
+                "name": "POINT_AMT_RPLC_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الإستبدال المحلي",
+                "caption_det_en": "Amount Of Local Redemption Points",
+                "description_en": ""
+            },
+            "totl_bill_amt": {
+                "name": "TOTL_BILL_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الفاتورة.",
+                "caption_det": "إجمالي مبلغ الفاتورة",
+                "caption_det_en": "Total Amount Of The Invoice",
+                "description_en": "Total bill amount."
+            },
+            "totl_bill_amt_local": {
+                "name": "TOTL_BILL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي مبلغ الفاتورة المحلي",
+                "caption_det_en": "Total Amount Of The Local Invoice",
+                "description_en": ""
+            },
+            "sman_code": {
+                "name": "SMAN_CODE",
+                "type": "VARCHAR2",
+                "description": "كود البائع .",
+                "caption_det": "رقم المندوب",
+                "caption_det_en": "Representative Number",
+                "description_en": "Salesman code."
+            },
+            "mrktr_code": {
+                "name": "MRKTR_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المسوق",
+                "caption_det_en": "Marketing Number",
+                "description_en": ""
+            },
+            "clctr_code": {
+                "name": "CLCTR_CODE",
+                "type": "NUMBER",
+                "description": "رمز المجمع.",
+                "caption_det": "رقم المحصل",
+                "caption_det_en": "Collector Number",
+                "description_en": "Collector code."
+            },
+            "emp_code": {
+                "name": "EMP_CODE",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم الموظف",
+                "caption_det_en": "Employee Number",
+                "description_en": ""
+            },
+            "drvr_no": {
+                "name": "DRVR_NO",
+                "type": "NUMBER",
+                "description": "رقم السائق.",
+                "caption_det": "رقم السائق",
+                "caption_det_en": "Driver Number",
+                "description_en": "Driver number."
+            },
+            "rgn_no": {
+                "name": "RGN_NO",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم المنطقة",
+                "caption_det_en": "Area Number",
+                "description_en": ""
+            },
+            "sub_ldgr1_code": {
+                "name": "SUB_LDGR1_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم مركز التكلفة",
+                "caption_det_en": "Cost Center Number",
+                "description_en": ""
+            },
+            "sub_ldgr2_code": {
+                "name": "SUB_LDGR2_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المشروع",
+                "caption_det_en": "Project Number",
+                "description_en": ""
+            },
+            "sub_ldgr3_code": {
+                "name": "SUB_LDGR3_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم اللأنشطة",
+                "caption_det_en": "Activity Number",
+                "description_en": ""
+            },
+            "sub_ldgr4_code": {
+                "name": "SUB_LDGR4_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعى الأول",
+                "caption_det_en": "The First Sub-Guide",
+                "description_en": ""
+            },
+            "sub_ldgr5_code": {
+                "name": "SUB_LDGR5_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثاني",
+                "caption_det_en": "The Second Sub Guide",
+                "description_en": ""
+            },
+            "sub_ldgr6_code": {
+                "name": "SUB_LDGR6_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثالث",
+                "caption_det_en": "The Third Sub-Guide",
+                "description_en": ""
+            },
+            "tax_code": {
+                "name": "TAX_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الضريبة.",
+                "caption_det": "رمز الضريبة",
+                "caption_det_en": "Tax Code",
+                "description_en": "Tax code."
+            },
+            "doc_due_date": {
+                "name": "DOC_DUE_DATE",
+                "type": "DATE",
+                "description": "تاريخ استحقاق الوثيقة.",
+                "caption_det": "تاريخ الإستحقاق",
+                "caption_det_en": "Due Date",
+                "description_en": "Due date for the document."
+            },
+            "doc_dsc": {
+                "name": "DOC_DSC",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "البيان",
+                "caption_det_en": "The Statement",
+                "description_en": ""
+            },
+            "ref_no": {
+                "name": "REF_NO",
+                "type": "VARCHAR2",
+                "description": "الرقم المرجعي.",
+                "caption_det": "رقم المرجع",
+                "caption_det_en": "Reference Number",
+                "description_en": "Reference number."
+            },
+            "mnl_no": {
+                "name": "MNL_NO",
+                "type": "VARCHAR2",
+                "description": "رقم الدليل المخصص للمستند.",
+                "caption_det": "الرقم اليدوي",
+                "caption_det_en": "The Manual Number",
+                "description_en": "Manual number assigned to the document."
+            },
+            "chq_note_no": {
+                "name": "CHQ_NOTE_NO",
+                "type": "NUMBER",
+                "description": "رقم الشيك أو الملاحظة.",
+                "caption_det": "رقم الإشعار",
+                "caption_det_en": "Notification Number",
+                "description_en": "Cheque or note number."
+            },
+            "chq_note_date": {
+                "name": "CHQ_NOTE_DATE",
+                "type": "DATE",
+                "description": "تاريخ الشيك أو الملاحظة.",
+                "caption_det": "تاريخ الإشعار",
+                "caption_det_en": "Date Of Notification",
+                "description_en": "Date of cheque or note."
+            },
+            "comm_prcnt": {
+                "name": "COMM_PRCNT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نسبة العمولة",
+                "caption_det_en": "Commission Rate",
+                "description_en": ""
+            },
+            "tax_ctgry_no": {
+                "name": "TAX_CTGRY_NO",
+                "type": "NUMBER",
+                "description": "رقم الفئة الضريبية.",
+                "caption_det": "طريقة إحتساب الضريبة",
+                "caption_det_en": "Method Of Calculating The Tax",
+                "description_en": "Tax category number."
+            },
+            "tax_bill_typ": {
+                "name": "TAX_BILL_TYP",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نوع الفاتورة الضريبي",
+                "caption_det_en": "Type Of Tax Invoice",
+                "description_en": ""
+            },
+            "clc_tax_free_qty_flg": {
+                "name": "CLC_TAX_FREE_QTY_FLG",
+                "type": "NUMBER",
+                "description": "وضع علامة لحساب الكمية المعفاة من الضرائب.",
+                "caption_det": "طريقة إحتساب ضريبة الكميات المجانية",
+                "caption_det_en": "The Method Of Calculating The Tax On Free Quantities",
+                "description_en": "Flag to calculate tax-free quantity."
+            },
+            "vrfy_flg": {
+                "name": "VRFY_FLG",
+                "type": "NUMBER",
+                "description": "علامة التحقق.",
+                "caption_det": "مؤشر المراجعة",
+                "caption_det_en": "Review Indicator",
+                "description_en": "Verification flag."
+            },
+            "stndby_flg": {
+                "name": "STNDBY_FLG",
+                "type": "NUMBER",
+                "description": "علم الاستعداد.",
+                "caption_det": "مؤشر التعليق",
+                "caption_det_en": "Comment Indicator",
+                "description_en": "Standby flag."
+            },
+            "pst_flg": {
+                "name": "PST_FLG",
+                "type": "NUMBER",
+                "description": "نشر العلم.",
+                "caption_det": "مؤشر الترحيل",
+                "caption_det_en": "Migration Index",
+                "description_en": "Posting flag."
+            },
+            "yr_no": {
+                "name": "YR_NO",
+                "type": "NUMBER",
+                "description": "رقم السنة.",
+                "caption_det": "السنة",
+                "caption_det_en": "The Year",
+                "description_en": "Year number."
+            },
+            "crt_usr": {
+                "name": "CRT_USR",
+                "type": "NUMBER",
+                "description": "تم إنشاؤها بواسطة المستخدم.",
+                "caption_det": "رقم المستخدم مدخل السجل",
+                "caption_det_en": "User Number Record Entry",
+                "description_en": "Created by user."
+            },
+            "crt_date": {
+                "name": "CRT_DATE",
+                "type": "DATE",
+                "description": "تاريخ الإنشاء.",
+                "caption_det": "تاريخ الإدخال",
+                "caption_det_en": "Entry Date",
+                "description_en": "Creation date."
+            }
+        }
+    },
+    "PURCHS_BILL_ANALYSIS_AI_VW": {
+        "table_name": "PURCHS_BILL_ANALYSIS_AI_VW",
+        "columns": {
+            "doc_srl": {
+                "name": "DOC_SRL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "تسلسل الوثيقة",
+                "caption_det_en": "Document Sequence",
+                "description_en": ""
+            },
+            "typ_no": {
+                "name": "TYP_NO",
+                "type": "NUMBER",
+                "description": "اكتب الرقم المتعلق بالمستند.",
+                "caption_det": "رقم النوع",
+                "caption_det_en": "Type Number",
+                "description_en": "Type number related to the document."
+            },
+            "doc_no": {
+                "name": "DOC_NO",
+                "type": "NUMBER",
+                "description": "رقم الوثيقة.",
+                "caption_det": "رقم الوثيقة",
+                "caption_det_en": "Document Number",
+                "description_en": "Document number."
+            },
+            "doc_date": {
+                "name": "DOC_DATE",
+                "type": "DATE",
+                "description": "تاريخ الوثيقة.",
+                "caption_det": "تاريخ الوثيقة",
+                "caption_det_en": "Document Date",
+                "description_en": "Date of the document."
+            },
+            "mnl_date": {
+                "name": "MNL_DATE",
+                "type": "DATE",
+                "description": "",
+                "caption_det": "التاريخ اليدوي",
+                "caption_det_en": "The Manual History",
+                "description_en": ""
+            },
+            "cur_code": {
+                "name": "CUR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العملة المستخدم في المعاملة.",
+                "caption_det": "رمز العملة",
+                "caption_det_en": "Currency Symbol",
+                "description_en": "Currency code used in the transaction."
+            },
+            "cur_rate": {
+                "name": "CUR_RATE",
+                "type": "NUMBER",
+                "description": "سعر صرف العملة.",
+                "caption_det": "سعر صرف الحساب",
+                "caption_det_en": "Exchange Rate Of The Account",
+                "description_en": "Currency exchange rate."
+            },
+            "stk_rate": {
+                "name": "STK_RATE",
+                "type": "NUMBER",
+                "description": "سعر السهم.",
+                "caption_det": "سعر صرف المخزن",
+                "caption_det_en": "The Exchange Rate Of The Warehouse",
+                "description_en": "Stock rate."
+            },
+            "wrhs_code": {
+                "name": "WRHS_CODE",
+                "type": "NUMBER",
+                "description": "رمز المستودع.",
+                "caption_det": "رقم المخزن",
+                "caption_det_en": "Warehouse Number",
+                "description_en": "Warehouse code."
+            },
+            "unt_no": {
+                "name": "UNT_NO",
+                "type": "NUMBER",
+                "description": "رقم الوحدة.",
+                "caption_det": "رقم الوحدة المحاسبية",
+                "caption_det_en": "Accounting Unit Number",
+                "description_en": "Unit number."
+            },
+            "pymnt_csh": {
+                "name": "PYMNT_CSH",
+                "type": "NUMBER",
+                "description": "الدفع بمبلغ نقدي.",
+                "caption_det": "طريقة دفع نقد",
+                "caption_det_en": "Cash Payment Method",
+                "description_en": "Payment in cash amount."
+            },
+            "pymnt_bnk": {
+                "name": "PYMNT_BNK",
+                "type": "NUMBER",
+                "description": "تم الدفع عن طريق البنك .",
+                "caption_det": "طريقة دفع بنك",
+                "caption_det_en": "Bank Payment Method",
+                "description_en": "Payment made via bank."
+            },
+            "pymnt_crdt": {
+                "name": "PYMNT_CRDT",
+                "type": "NUMBER",
+                "description": "الدفع على الائتمان.",
+                "caption_det": "طريقة دفع أجل",
+                "caption_det_en": "Payment Method For The Due Date",
+                "description_en": "Payment on credit."
+            },
+            "pymnt_ac": {
+                "name": "PYMNT_AC",
+                "type": "NUMBER",
+                "description": "الدفع في الحساب.",
+                "caption_det": "طريقة دفع حساب",
+                "caption_det_en": "Payment Method",
+                "description_en": "Payment in an account."
+            },
+            "vndr_code": {
+                "name": "VNDR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز البائع.",
+                "caption_det": "رقم المورد",
+                "caption_det_en": "Supplier Number",
+                "description_en": "Vendor code."
+            },
+            "vndr_nm": {
+                "name": "VNDR_NM",
+                "type": "VARCHAR2",
+                "description": "اسم البائع.",
+                "caption_det": "اسم المورد",
+                "caption_det_en": "Supplier Name",
+                "description_en": "Vendor name."
+            },
+            "ac_code_dtl_sub": {
+                "name": "AC_CODE_DTL_SUB",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي.",
+                "caption_det": "رقم الحساب التحليلي الفرعي",
+                "caption_det_en": "Sub Analytical Account Number",
+                "description_en": "Sub-account code detail."
+            },
+            "csh_code": {
+                "name": "CSH_CODE",
+                "type": "NUMBER",
+                "description": "رمز النقدية.",
+                "caption_det": "رقم الصندوق",
+                "caption_det_en": "Box Number",
+                "description_en": "Cash code."
+            },
+            "bnk_code": {
+                "name": "BNK_CODE",
+                "type": "NUMBER",
+                "description": "رمز البنك.",
+                "caption_det": "رقم البنك",
+                "caption_det_en": "Bank Number",
+                "description_en": "Bank code."
+            },
+            "ac_code_dtl_sub_bnk": {
+                "name": "AC_CODE_DTL_SUB_BNK",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي للبنك.",
+                "caption_det": "رقم البنك الفرعي",
+                "caption_det_en": "Sub Bank Number",
+                "description_en": "Bank sub-account code detail."
+            },
+            "ac_code": {
+                "name": "AC_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب أو الرقم المرتبط بالمعاملة.",
+                "caption_det": "رقم الحساب",
+                "caption_det_en": "Account Number",
+                "description_en": "Account code or number associated with the transaction."
+            },
+            "ac_code_dtl": {
+                "name": "AC_CODE_DTL",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب التفصيلي.",
+                "caption_det": "رقم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Number",
+                "description_en": "Detailed account code."
+            },
+            "ac_dtl_typ": {
+                "name": "AC_DTL_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب التفصيلي.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of detailed account."
+            },
+            "csh_amt": {
+                "name": "CSH_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع نقدا.",
+                "caption_det": "المبلغ النقدى",
+                "caption_det_en": "The Cash Amount",
+                "description_en": "Amount paid in cash."
+            },
+            "bnk_amt": {
+                "name": "BNK_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع عن طريق البنك .",
+                "caption_det": "مبلغ البنك",
+                "caption_det_en": "Bank Amount",
+                "description_en": "Amount paid via bank."
+            },
+            "crdt_amt": {
+                "name": "CRDT_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع على الائتمان.",
+                "caption_det": "المبلغ الأجل",
+                "caption_det_en": "The Amount Of The Term",
+                "description_en": "Amount paid on credit."
+            },
+            "ac_amt": {
+                "name": "AC_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الحساب.",
+                "caption_det": "مبلغ الحساب",
+                "caption_det_en": "Account Amount",
+                "description_en": "Account amount."
+            },
+            "doc_amt": {
+                "name": "DOC_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للوثيقة.",
+                "caption_det": "مبلغ الوثيقة",
+                "caption_det_en": "Document Amount",
+                "description_en": "Total document amount."
+            },
+            "dscnt_amt": {
+                "name": "DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount."
+            },
+            "othr_amt": {
+                "name": "OTHR_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ أو رسوم أخرى.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "The Amount Of Burdens",
+                "description_en": "Other amount or charges."
+            },
+            "tax_amt": {
+                "name": "TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "The Amount Of Tax",
+                "description_en": "Tax amount."
+            },
+            "dscnt_amt_add": {
+                "name": "DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم الإضافي.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount."
+            },
+            "csh_amt_local": {
+                "name": "CSH_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "المبلغ النقدي المحلي",
+                "caption_det_en": "The Local Cash Amount",
+                "description_en": ""
+            },
+            "bnk_amt_local": {
+                "name": "BNK_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ البنك المحلي",
+                "caption_det_en": "Local Bank Amount",
+                "description_en": ""
+            },
+            "crdt_amt_local": {
+                "name": "CRDT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الأجل المحلي",
+                "caption_det_en": "The Amount Of The Local Term",
+                "description_en": ""
+            },
+            "ac_amt_local": {
+                "name": "AC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الحساب المحلي",
+                "caption_det_en": "Local Account Amount",
+                "description_en": ""
+            },
+            "doc_amt_local": {
+                "name": "DOC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الفاتورة المحلي",
+                "caption_det_en": "The Local Invoice Amount",
+                "description_en": ""
+            },
+            "dscnt_amt_local": {
+                "name": "DSCNT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "الخصم بالعملة المحلية",
+                "caption_det_en": "The Discount In The Local Currency",
+                "description_en": ""
+            },
+            "othr_amt_local": {
+                "name": "OTHR_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "الأعباء بالعملة المحلية",
+                "caption_det_en": "The Burdens In The Local Currency",
+                "description_en": ""
+            },
+            "tax_amt_local": {
+                "name": "TAX_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "الضريبة بالعملة المحلية",
+                "caption_det_en": "The Tax In Local Currency",
+                "description_en": ""
+            },
+            "dscnt_amt_add_local": {
+                "name": "DSCNT_AMT_ADD_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الخصومات الإضافية بالعملة المحلية",
+                "caption_det_en": "Total Additional Discounts In Local Currency",
+                "description_en": ""
+            },
+            "totl_bill_amt": {
+                "name": "TOTL_BILL_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الفاتورة.",
+                "caption_det": "إجمالي مبلغ الفاتورة",
+                "caption_det_en": "Total Amount Of The Invoice",
+                "description_en": "Total bill amount."
+            },
+            "totl_bill_amt_local": {
+                "name": "TOTL_BILL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي مبلغ الفاتورة المحلي",
+                "caption_det_en": "Total Amount Of The Local Invoice",
+                "description_en": ""
+            },
+            "pman_code": {
+                "name": "PMAN_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز مدير الدفع.",
+                "caption_det": "رقم مدير المشروع",
+                "caption_det_en": "Project Manager Number",
+                "description_en": "Payment manager code."
+            },
+            "drvr_no": {
+                "name": "DRVR_NO",
+                "type": "VARCHAR2",
+                "description": "رقم السائق.",
+                "caption_det": "رقم السائق",
+                "caption_det_en": "Driver Number",
+                "description_en": "Driver number."
+            },
+            "sub_ldgr1_code": {
+                "name": "SUB_LDGR1_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم مركز التكلفة",
+                "caption_det_en": "Cost Center Number",
+                "description_en": ""
+            },
+            "sub_ldgr2_code": {
+                "name": "SUB_LDGR2_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المشروع",
+                "caption_det_en": "Project Number",
+                "description_en": ""
+            },
+            "sub_ldgr3_code": {
+                "name": "SUB_LDGR3_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم اللأنشطة",
+                "caption_det_en": "Activity Number",
+                "description_en": ""
+            },
+            "sub_ldgr4_code": {
+                "name": "SUB_LDGR4_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعى الأول",
+                "caption_det_en": "The First Sub-Guide",
+                "description_en": ""
+            },
+            "sub_ldgr5_code": {
+                "name": "SUB_LDGR5_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثاني",
+                "caption_det_en": "The Second Sub Guide",
+                "description_en": ""
+            },
+            "sub_ldgr6_code": {
+                "name": "SUB_LDGR6_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثالث",
+                "caption_det_en": "The Third Sub-Guide",
+                "description_en": ""
+            },
+            "tax_code": {
+                "name": "TAX_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الضريبة.",
+                "caption_det": "رمز الضريبة",
+                "caption_det_en": "Tax Code",
+                "description_en": "Tax code."
+            },
+            "doc_due_date": {
+                "name": "DOC_DUE_DATE",
+                "type": "DATE",
+                "description": "تاريخ استحقاق الوثيقة.",
+                "caption_det": "تاريخ الإستحقاق",
+                "caption_det_en": "Due Date",
+                "description_en": "Due date for the document."
+            },
+            "doc_dsc": {
+                "name": "DOC_DSC",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "البيان",
+                "caption_det_en": "The Statement",
+                "description_en": ""
+            },
+            "ref_no": {
+                "name": "REF_NO",
+                "type": "VARCHAR2",
+                "description": "الرقم المرجعي.",
+                "caption_det": "رقم المرجع",
+                "caption_det_en": "Reference Number",
+                "description_en": "Reference number."
+            },
+            "mnl_no": {
+                "name": "MNL_NO",
+                "type": "VARCHAR2",
+                "description": "رقم الدليل المخصص للمستند.",
+                "caption_det": "الرقم اليدوي",
+                "caption_det_en": "The Manual Number",
+                "description_en": "Manual number assigned to the document."
+            },
+            "chq_note_no": {
+                "name": "CHQ_NOTE_NO",
+                "type": "NUMBER",
+                "description": "رقم الشيك أو الملاحظة.",
+                "caption_det": "رقم الإشعار",
+                "caption_det_en": "Notification Number",
+                "description_en": "Cheque or note number."
+            },
+            "chq_note_date": {
+                "name": "CHQ_NOTE_DATE",
+                "type": "DATE",
+                "description": "تاريخ الشيك أو الملاحظة.",
+                "caption_det": "تاريخ الإشعار",
+                "caption_det_en": "Notification Date",
+                "description_en": "Date of cheque or note."
+            },
+            "tax_ctgry_no": {
+                "name": "TAX_CTGRY_NO",
+                "type": "NUMBER",
+                "description": "رقم الفئة الضريبية.",
+                "caption_det": "طريقة إحتساب الضريبة",
+                "caption_det_en": "Method Of Calculating The Tax",
+                "description_en": "Tax category number."
+            },
+            "clc_tax_free_qty_flg": {
+                "name": "CLC_TAX_FREE_QTY_FLG",
+                "type": "NUMBER",
+                "description": "وضع علامة لحساب الكمية المعفاة من الضرائب.",
+                "caption_det": "طريقة إحتساب ضريبة الكميات المجانية",
+                "caption_det_en": "Method Of Calculating The Tax On Free Quantities",
+                "description_en": "Flag to calculate tax-free quantity."
+            },
+            "vrfy_flg": {
+                "name": "VRFY_FLG",
+                "type": "NUMBER",
+                "description": "علامة التحقق.",
+                "caption_det": "مؤشر المراجعة",
+                "caption_det_en": "Review Indicator",
+                "description_en": "Verification flag."
+            },
+            "stndby_flg": {
+                "name": "STNDBY_FLG",
+                "type": "NUMBER",
+                "description": "علم الاستعداد.",
+                "caption_det": "مؤشر التعليق",
+                "caption_det_en": "Comment Indicator",
+                "description_en": "Standby flag."
+            },
+            "pst_flg": {
+                "name": "PST_FLG",
+                "type": "NUMBER",
+                "description": "نشر العلم.",
+                "caption_det": "مؤشر الترحيل",
+                "caption_det_en": "Migration Index",
+                "description_en": "Posting flag."
+            },
+            "yr_no": {
+                "name": "YR_NO",
+                "type": "NUMBER",
+                "description": "رقم السنة.",
+                "caption_det": "السنة",
+                "caption_det_en": "The Year",
+                "description_en": "Year number."
+            },
+            "crt_usr": {
+                "name": "CRT_USR",
+                "type": "NUMBER",
+                "description": "تم إنشاؤها بواسطة المستخدم.",
+                "caption_det": "رقم المستخدم مدخل السجل",
+                "caption_det_en": "User Number Record Entry",
+                "description_en": "Created by user."
+            },
+            "crt_date": {
+                "name": "CRT_DATE",
+                "type": "DATE",
+                "description": "تاريخ الإنشاء.",
+                "caption_det": "تاريخ الإدخال",
+                "caption_det_en": "Entry Date",
+                "description_en": "Creation date."
+            },
+            "doc_d_sq": {
+                "name": "DOC_D_SQ",
+                "type": "NUMBER",
+                "description": "تسلسل تفاصيل الوثيقة",
+                "caption_det": "تسلسل الصنف بالوثيقة",
+                "caption_det_en": "Item Sequence In The Document",
+                "description_en": "Document detail sequence."
+            },
+            "itm_code": {
+                "name": "ITM_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز السلعة.",
+                "caption_det": "رقم الصنف",
+                "caption_det_en": "Item Number",
+                "description_en": "Item code."
+            },
+            "itm_unt": {
+                "name": "ITM_UNT",
+                "type": "VARCHAR2",
+                "description": "وحدة السلعة.",
+                "caption_det": "الوحدة",
+                "caption_det_en": "The Unity",
+                "description_en": "Item unit."
+            },
+            "itm_sz": {
+                "name": "ITM_SZ",
+                "type": "NUMBER",
+                "description": "حجم السلعة.",
+                "caption_det": "العبوة",
+                "caption_det_en": "The Container",
+                "description_en": "Item size."
+            },
+            "exp_date": {
+                "name": "EXP_DATE",
+                "type": "DATE",
+                "description": "تاريخ انتهاء صلاحية السلعة.",
+                "caption_det": "تاريخ الإنتهاء",
+                "caption_det_en": "Expiration Date",
+                "description_en": "Item expiration date."
+            },
+            "itm_sgmnt_cntct": {
+                "name": "ITM_SGMNT_CNTCT",
+                "type": "VARCHAR2",
+                "description": "جهة اتصال شريحة العنصر.",
+                "caption_det": "رقم الدفعة",
+                "caption_det_en": "Batch Number",
+                "description_en": "Item segment contact."
+            },
+            "itm_qty": {
+                "name": "ITM_QTY",
+                "type": "NUMBER",
+                "description": "كمية السلعة.",
+                "caption_det": "الكمية",
+                "caption_det_en": "The Quantity",
+                "description_en": "Item quantity."
+            },
+            "itm_free_qty": {
+                "name": "ITM_FREE_QTY",
+                "type": "NUMBER",
+                "description": "كمية مجانية من السلعة.",
+                "caption_det": "الكمية المجانية",
+                "caption_det_en": "The Free Quantity",
+                "description_en": "Free quantity of the item."
+            },
+            "itm_free_qty_add": {
+                "name": "ITM_FREE_QTY_ADD",
+                "type": "NUMBER",
+                "description": "كمية إضافية مجانية من السلعة.",
+                "caption_det": "الكمية المجانية الإضافية",
+                "caption_det_en": "The Additional Free Quantity",
+                "description_en": "Additional free quantity of the item."
+            },
+            "itm_totl_free_qty": {
+                "name": "ITM_TOTL_FREE_QTY",
+                "type": "NUMBER",
+                "description": "إجمالي الكمية المجانية من السلعة.",
+                "caption_det": "إجمالي الكمية المجانية",
+                "caption_det_en": "Total Free Quantity",
+                "description_en": "Total free quantity of the item."
+            },
+            "itm_mn_qty": {
+                "name": "ITM_MN_QTY",
+                "type": "NUMBER",
+                "description": "الكمية الرئيسية للسلعة.",
+                "caption_det": "الكمية بالوحدة الصغيرة",
+                "caption_det_en": "The Quantity In The Small Unit",
+                "description_en": "Main quantity of the item."
+            },
+            "itm_mn_free_qty": {
+                "name": "ITM_MN_FREE_QTY",
+                "type": "NUMBER",
+                "description": "الكمية المجانية الرئيسية للصنف.",
+                "caption_det": "الكمية المجانية بالوحدة الصغيرة",
+                "caption_det_en": "The Free Quantity In The Small Unit",
+                "description_en": "Main free quantity of the item."
+            },
+            "itm_totl_mn_free_qty": {
+                "name": "ITM_TOTL_MN_FREE_QTY",
+                "type": "NUMBER",
+                "description": "إجمالي الكمية المجانية الرئيسية للصنف.",
+                "caption_det": "اجمالى الكمية المجانية بالوحدة الرئيسية",
+                "caption_det_en": "Total Free Quantity In The Main Unit",
+                "description_en": "Total main free quantity of the item."
+            },
+            "itm_price": {
+                "name": "ITM_PRICE",
+                "type": "NUMBER",
+                "description": "سعر السلعة.",
+                "caption_det": "سعر الصنف",
+                "caption_det_en": "Item Price",
+                "description_en": "Price of the item."
+            },
+            "itm_stk_cst": {
+                "name": "ITM_STK_CST",
+                "type": "NUMBER",
+                "description": "تكلفة مخزون السلعة.",
+                "caption_det": "تكلفة الصنف",
+                "caption_det_en": "The Cost Of The Item",
+                "description_en": "Stock cost of the item."
+            },
+            "itm_tax_prcnt": {
+                "name": "ITM_TAX_PRCNT",
+                "type": "NUMBER",
+                "description": "نسبة الضريبة على السلعة.",
+                "caption_det": "نسبة الضريبة",
+                "caption_det_en": "Tax Rate",
+                "description_en": "Tax percentage on the item."
+            },
+            "itm_tax_amt": {
+                "name": "ITM_TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة على السلعة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "The Amount Of Tax",
+                "description_en": "Tax amount on the item."
+            },
+            "itm_othr_chrg_amt": {
+                "name": "ITM_OTHR_CHRG_AMT",
+                "type": "NUMBER",
+                "description": "رسوم أخرى على هذا البند.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "Amount Of Burdens",
+                "description_en": "Other charges on the item."
+            },
+            "itm_dscnt_amt": {
+                "name": "ITM_DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم على السلعة.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount on the item."
+            },
+            "itm_dscnt_amt_add": {
+                "name": "ITM_DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ خصم إضافي على هذا البند.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount on the item."
+            },
+            "itm_totl_price": {
+                "name": "ITM_TOTL_PRICE",
+                "type": "NUMBER",
+                "description": "السعر الإجمالي للسلعة.",
+                "caption_det": "إجمالي سعر الصنف",
+                "caption_det_en": "Total Price Of The Item",
+                "description_en": "Total price of the item."
+            },
+            "itm_totl_dscnt_amt": {
+                "name": "ITM_TOTL_DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الخصم على السلعة.",
+                "caption_det": "إجمالي خصم الصنف",
+                "caption_det_en": "Total Item Discount",
+                "description_en": "Total discount amount on the item."
+            },
+            "itm_totl_othr_chrg_amt": {
+                "name": "ITM_TOTL_OTHR_CHRG_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي الرسوم الأخرى على هذا البند.",
+                "caption_det": "إجمالي أعباء الصنف",
+                "caption_det_en": "Total Burden Of The Item",
+                "description_en": "Total other charges on the item."
+            },
+            "itm_totl_tax_amt": {
+                "name": "ITM_TOTL_TAX_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الضريبة على السلعة.",
+                "caption_det": "إجمالي مبلغ  الضريبة",
+                "caption_det_en": "Total Amount Of The Tax",
+                "description_en": "Total tax amount on the item."
+            },
+            "itm_totl_dscnt_amt_add": {
+                "name": "ITM_TOTL_DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الخصم الإضافي على السلعة.",
+                "caption_det": "إجمالي مبلغ الخصومات الإضافية للصنف",
+                "caption_det_en": "Total Amount Of Additional Discounts For The Item",
+                "description_en": "Total additional discount amount on the item."
+            },
+            "itm_totl_amt": {
+                "name": "ITM_TOTL_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للعنصر.",
+                "caption_det": "إجمالي المبلغ",
+                "caption_det_en": "Total Amount",
+                "description_en": "Total amount of the item."
+            },
+            "itm_totl_stk_cst": {
+                "name": "ITM_TOTL_STK_CST",
+                "type": "NUMBER",
+                "description": "إجمالي تكلفة المخزون لهذا البند.",
+                "caption_det": "إجمالي تكلفة الصنف",
+                "caption_det_en": "Total Cost Of The Item",
+                "description_en": "Total stock cost of the item."
+            },
+            "itm_totl_price_local": {
+                "name": "ITM_TOTL_PRICE_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي سعر الصنف بالعملة المحلية",
+                "caption_det_en": "Total Price Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_dscnt_amt_local": {
+                "name": "ITM_TOTL_DSCNT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي خصم الصنف بالعملة المحلية",
+                "caption_det_en": "Total Discount Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_othr_amt_local": {
+                "name": "ITM_TOTL_OTHR_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي أعباء الصنف بالعملة المحلية",
+                "caption_det_en": "Total Burden Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_tax_amt_local": {
+                "name": "ITM_TOTL_TAX_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي ضريبة الصنف بالعملة المحلية",
+                "caption_det_en": "Total Tax Amount In Local Currency",
+                "description_en": ""
+            },
+            "itm_dscnt_amt_add_local": {
+                "name": "ITM_DSCNT_AMT_ADD_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الخصومات الإضافية للصنف بالعملة المحلية",
+                "caption_det_en": "Total Additional Discounts For The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_amt_local": {
+                "name": "ITM_TOTL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي المبلغ بالعملة المحلية",
+                "caption_det_en": "Total Amount In Local Currency",
+                "description_en": ""
+            }
+        }
+    },
+    "PURCHS_BILL_MST_AI_VW": {
+        "table_name": "PURCHS_BILL_MST_AI_VW",
+        "columns": {
+            "typ_no": {
+                "name": "TYP_NO",
+                "type": "NUMBER",
+                "description": "اكتب الرقم المتعلق بالمستند.",
+                "caption_det": "رقم النوع",
+                "caption_det_en": "Type Number",
+                "description_en": "Type number related to the document."
+            },
+            "doc_no": {
+                "name": "DOC_NO",
+                "type": "NUMBER",
+                "description": "رقم الوثيقة.",
+                "caption_det": "رقم الوثيقة",
+                "caption_det_en": "Document Number",
+                "description_en": "Document number."
+            },
+            "doc_srl": {
+                "name": "DOC_SRL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "تسلسل الوثيقة",
+                "caption_det_en": "Document Sequence",
+                "description_en": ""
+            },
+            "doc_date": {
+                "name": "DOC_DATE",
+                "type": "DATE",
+                "description": "تاريخ الوثيقة.",
+                "caption_det": "تاريخ الوثيقة",
+                "caption_det_en": "Document Date",
+                "description_en": "Date of the document."
+            },
+            "mnl_date": {
+                "name": "MNL_DATE",
+                "type": "DATE",
+                "description": "",
+                "caption_det": "التاريخ اليدوي",
+                "caption_det_en": "The Manual History",
+                "description_en": ""
+            },
+            "cur_code": {
+                "name": "CUR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العملة المستخدم في المعاملة.",
+                "caption_det": "رمز العملة",
+                "caption_det_en": "Currency Code",
+                "description_en": "Currency code used in the transaction."
+            },
+            "cur_rate": {
+                "name": "CUR_RATE",
+                "type": "NUMBER",
+                "description": "سعر صرف العملة.",
+                "caption_det": "سعر صرف الحساب",
+                "caption_det_en": "Exchange Rate Of The Account",
+                "description_en": "Currency exchange rate."
+            },
+            "stk_rate": {
+                "name": "STK_RATE",
+                "type": "NUMBER",
+                "description": "سعر السهم.",
+                "caption_det": "سعر صرف المخزن",
+                "caption_det_en": "The Exchange Rate Of The Warehouse",
+                "description_en": "Stock rate."
+            },
+            "wrhs_code": {
+                "name": "WRHS_CODE",
+                "type": "NUMBER",
+                "description": "رمز المستودع.",
+                "caption_det": "رقم المخزن",
+                "caption_det_en": "Warehouse Number",
+                "description_en": "Warehouse code."
+            },
+            "unt_no": {
+                "name": "UNT_NO",
+                "type": "NUMBER",
+                "description": "رقم الوحدة.",
+                "caption_det": "رقم الوحدة المحاسبية",
+                "caption_det_en": "Accounting Unit Number",
+                "description_en": "Unit number."
+            },
+            "pymnt_csh": {
+                "name": "PYMNT_CSH",
+                "type": "NUMBER",
+                "description": "الدفع بمبلغ نقدي.",
+                "caption_det": "طريقة دفع نقد",
+                "caption_det_en": "Cash Payment Method",
+                "description_en": "Payment in cash amount."
+            },
+            "pymnt_bnk": {
+                "name": "PYMNT_BNK",
+                "type": "NUMBER",
+                "description": "تم الدفع عن طريق البنك .",
+                "caption_det": "طريقة دفع بنك",
+                "caption_det_en": "Bank Payment Method",
+                "description_en": "Payment made via bank."
+            },
+            "pymnt_crdt": {
+                "name": "PYMNT_CRDT",
+                "type": "NUMBER",
+                "description": "الدفع على الائتمان.",
+                "caption_det": "طريقة دفع أجل",
+                "caption_det_en": "Payment Method Deferred",
+                "description_en": "Payment on credit."
+            },
+            "pymnt_ac": {
+                "name": "PYMNT_AC",
+                "type": "NUMBER",
+                "description": "الدفع في الحساب.",
+                "caption_det": "طريقة دفع حساب",
+                "caption_det_en": "Payment Method",
+                "description_en": "Payment in an account."
+            },
+            "csh_code": {
+                "name": "CSH_CODE",
+                "type": "NUMBER",
+                "description": "رمز النقدية.",
+                "caption_det": "رقم الصندوق",
+                "caption_det_en": "Box Number",
+                "description_en": "Cash code."
+            },
+            "bnk_code": {
+                "name": "BNK_CODE",
+                "type": "NUMBER",
+                "description": "رمز البنك.",
+                "caption_det": "رقم البنك",
+                "caption_det_en": "Bank Number",
+                "description_en": "Bank code."
+            },
+            "ac_code_dtl_sub_bnk": {
+                "name": "AC_CODE_DTL_SUB_BNK",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي للبنك.",
+                "caption_det": "رقم البنك الفرعي",
+                "caption_det_en": "Branch Bank Number",
+                "description_en": "Bank sub-account code detail."
+            },
+            "ac_code": {
+                "name": "AC_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب أو الرقم المرتبط بالمعاملة.",
+                "caption_det": "رقم الحساب",
+                "caption_det_en": "Account Number",
+                "description_en": "Account code or number associated with the transaction."
+            },
+            "ac_code_dtl": {
+                "name": "AC_CODE_DTL",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب التفصيلي.",
+                "caption_det": "رقم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Number",
+                "description_en": "Detailed account code."
+            },
+            "ac_dtl_typ": {
+                "name": "AC_DTL_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب التفصيلي.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of detailed account."
+            },
+            "ac_code_dtl_sub": {
+                "name": "AC_CODE_DTL_SUB",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي.",
+                "caption_det": "رقم الحساب التحليلي الفرعي",
+                "caption_det_en": "Sub Analytical Account Number",
+                "description_en": "Sub-account code detail."
+            },
+            "csh_amt": {
+                "name": "CSH_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع نقدا.",
+                "caption_det": "المبلغ النقدى",
+                "caption_det_en": "The Cash Amount",
+                "description_en": "Amount paid in cash."
+            },
+            "bnk_amt": {
+                "name": "BNK_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع عن طريق البنك .",
+                "caption_det": "مبلغ البنك",
+                "caption_det_en": "Bank Amount",
+                "description_en": "Amount paid via bank."
+            },
+            "crdt_amt": {
+                "name": "CRDT_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع على الائتمان.",
+                "caption_det": "المبلغ الأجل",
+                "caption_det_en": "The Amount Of The Term",
+                "description_en": "Amount paid on credit."
+            },
+            "ac_amt": {
+                "name": "AC_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الحساب.",
+                "caption_det": "مبلغ الحساب",
+                "caption_det_en": "Account Amount",
+                "description_en": "Account amount."
+            },
+            "doc_amt": {
+                "name": "DOC_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للوثيقة.",
+                "caption_det": "مبلغ الوثيقة",
+                "caption_det_en": "Document Amount",
+                "description_en": "Total document amount."
+            },
+            "dscnt_amt": {
+                "name": "DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount."
+            },
+            "othr_amt": {
+                "name": "OTHR_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ أو رسوم أخرى.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "Amount Of Burdens",
+                "description_en": "Other amount or charges."
+            },
+            "tax_amt": {
+                "name": "TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "Tax Amount",
+                "description_en": "Tax amount."
+            },
+            "dscnt_amt_add": {
+                "name": "DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم الإضافي.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount."
+            },
+            "csh_amt_local": {
+                "name": "CSH_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "المبلغ النقدي المحلي",
+                "caption_det_en": "The Local Cash Amount",
+                "description_en": ""
+            },
+            "bnk_amt_local": {
+                "name": "BNK_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ البنك المحلي",
+                "caption_det_en": "Local Bank Amount",
+                "description_en": ""
+            },
+            "crdt_amt_local": {
+                "name": "CRDT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الأجل المحلي",
+                "caption_det_en": "The Amount Of The Local Term",
+                "description_en": ""
+            },
+            "ac_amt_local": {
+                "name": "AC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الحساب المحلي",
+                "caption_det_en": "Local Account Amount",
+                "description_en": ""
+            },
+            "totl_bill_amt": {
+                "name": "TOTL_BILL_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الفاتورة.",
+                "caption_det": "إجمالي مبلغ الفاتورة",
+                "caption_det_en": "Total Amount Of The Invoice",
+                "description_en": "Total bill amount."
+            },
+            "totl_bill_amt_local": {
+                "name": "TOTL_BILL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي مبلغ الفاتورة المحلي",
+                "caption_det_en": "Total Amount Of The Local Invoice",
+                "description_en": ""
+            }
+        }
+    },
+    "SALES_RT_BILL_ANALYSIS_AI_VW": {
+        "table_name": "SALES_RT_BILL_ANALYSIS_AI_VW",
+        "columns": {
+            "typ_no": {
+                "name": "TYP_NO",
+                "type": "NUMBER",
+                "description": "اكتب الرقم المتعلق بالمستند.",
+                "caption_det": "رقم النوع",
+                "caption_det_en": "Type Number",
+                "description_en": "Type number related to the document."
+            },
+            "doc_no": {
+                "name": "DOC_NO",
+                "type": "NUMBER",
+                "description": "رقم الوثيقة.",
+                "caption_det": "رقم الوثيقة",
+                "caption_det_en": "Document Number",
+                "description_en": "Document number."
+            },
+            "doc_srl": {
+                "name": "DOC_SRL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "تسلسل الوثيقة",
+                "caption_det_en": "Document Sequence",
+                "description_en": ""
+            },
+            "doc_date": {
+                "name": "DOC_DATE",
+                "type": "DATE",
+                "description": "تاريخ الوثيقة.",
+                "caption_det": "تاريخ الوثيقة",
+                "caption_det_en": "Document Date",
+                "description_en": "Date of the document."
+            },
+            "mnl_date": {
+                "name": "MNL_DATE",
+                "type": "DATE",
+                "description": "",
+                "caption_det": "التاريخ اليدوي",
+                "caption_det_en": "The Manual History",
+                "description_en": ""
+            },
+            "cur_code": {
+                "name": "CUR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العملة المستخدم في المعاملة.",
+                "caption_det": "رمز العملة",
+                "caption_det_en": "Currency Code",
+                "description_en": "Currency code used in the transaction."
+            },
+            "cur_rate": {
+                "name": "CUR_RATE",
+                "type": "NUMBER",
+                "description": "سعر صرف العملة.",
+                "caption_det": "سعر صرف الحساب",
+                "caption_det_en": "Exchange Rate Of The Account",
+                "description_en": "Currency exchange rate."
+            },
+            "stk_rate": {
+                "name": "STK_RATE",
+                "type": "NUMBER",
+                "description": "سعر السهم.",
+                "caption_det": "سعر صرف المخزن",
+                "caption_det_en": "The Exchange Rate Of The Warehouse",
+                "description_en": "Stock rate."
+            },
+            "wrhs_code": {
+                "name": "WRHS_CODE",
+                "type": "NUMBER",
+                "description": "رمز المستودع.",
+                "caption_det": "رقم المخزن",
+                "caption_det_en": "Warehouse Number",
+                "description_en": "Warehouse code."
+            },
+            "unt_no": {
+                "name": "UNT_NO",
+                "type": "NUMBER",
+                "description": "رقم الوحدة.",
+                "caption_det": "رقم الوحدة المحاسبية",
+                "caption_det_en": "Accounting Unit Number",
+                "description_en": "Unit number."
+            },
+            "pymnt_csh": {
+                "name": "PYMNT_CSH",
+                "type": "NUMBER",
+                "description": "الدفع بمبلغ نقدي.",
+                "caption_det": "طريقة دفع نقد",
+                "caption_det_en": "Cash Payment Method",
+                "description_en": "Payment in cash amount."
+            },
+            "pymnt_bnk": {
+                "name": "PYMNT_BNK",
+                "type": "NUMBER",
+                "description": "تم الدفع عن طريق البنك .",
+                "caption_det": "طريقة دفع بنك",
+                "caption_det_en": "Bank Payment Method",
+                "description_en": "Payment made via bank."
+            },
+            "pymnt_crdt": {
+                "name": "PYMNT_CRDT",
+                "type": "NUMBER",
+                "description": "الدفع على الائتمان.",
+                "caption_det": "طريقة دفع أجل",
+                "caption_det_en": "Payment Method For The Due Date",
+                "description_en": "Payment on credit."
+            },
+            "pymnt_cpn": {
+                "name": "PYMNT_CPN",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع كوبون",
+                "caption_det_en": "Coupon Payment Method",
+                "description_en": ""
+            },
+            "pymnt_ac": {
+                "name": "PYMNT_AC",
+                "type": "NUMBER",
+                "description": "الدفع في الحساب.",
+                "caption_det": "طريقة دفع حساب",
+                "caption_det_en": "Payment Method",
+                "description_en": "Payment in an account."
+            },
+            "pymnt_point_rplc": {
+                "name": "PYMNT_POINT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع  إستبدال نقاط",
+                "caption_det_en": "Payment Method For Redeeming Points",
+                "description_en": ""
+            },
+            "pymnt_rplc": {
+                "name": "PYMNT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع إستبدال",
+                "caption_det_en": "Method Of Payment For Exchange",
+                "description_en": ""
+            },
+            "cstmr_code": {
+                "name": "CSTMR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العميل.",
+                "caption_det": "رقم العميل",
+                "caption_det_en": "Customer Number",
+                "description_en": "Customer code."
+            },
+            "cstmr_nm": {
+                "name": "CSTMR_NM",
+                "type": "VARCHAR2",
+                "description": "اسم العميل.",
+                "caption_det": "اسم العميل",
+                "caption_det_en": "Client Name",
+                "description_en": "Customer name."
+            },
+            "cstmr_mobile": {
+                "name": "CSTMR_MOBILE",
+                "type": "VARCHAR2",
+                "description": "رقم الهاتف المحمول للعميل.",
+                "caption_det": "رقم الجوال",
+                "caption_det_en": "Mobile Number",
+                "description_en": "Customer mobile number."
+            },
+            "ac_code_dtl_sub_cst": {
+                "name": "AC_CODE_DTL_SUB_CST",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المستفيد",
+                "caption_det_en": "Beneficiary Number",
+                "description_en": ""
+            },
+            "csh_code": {
+                "name": "CSH_CODE",
+                "type": "NUMBER",
+                "description": "رمز النقدية.",
+                "caption_det": "رقم الصندوق",
+                "caption_det_en": "Box Number",
+                "description_en": "Cash code."
+            },
+            "bnk_code": {
+                "name": "BNK_CODE",
+                "type": "NUMBER",
+                "description": "رمز البنك.",
+                "caption_det": "رقم البنك",
+                "caption_det_en": "Bank Number",
+                "description_en": "Bank code."
+            },
+            "ac_code_dtl_sub_bnk": {
+                "name": "AC_CODE_DTL_SUB_BNK",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي للبنك.",
+                "caption_det": "رقم البنك الفرعي",
+                "caption_det_en": "Sub Bank Number",
+                "description_en": "Bank sub-account code detail."
+            },
+            "ac_code": {
+                "name": "AC_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب أو الرقم المرتبط بالمعاملة.",
+                "caption_det": "رقم الحساب",
+                "caption_det_en": "Account Number",
+                "description_en": "Account code or number associated with the transaction."
+            },
+            "ac_code_dtl": {
+                "name": "AC_CODE_DTL",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب التفصيلي.",
+                "caption_det": "رقم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Number",
+                "description_en": "Detailed account code."
+            },
+            "ac_dtl_typ": {
+                "name": "AC_DTL_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب التفصيلي.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of detailed account."
+            },
+            "ac_code_dtl_sub": {
+                "name": "AC_CODE_DTL_SUB",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي.",
+                "caption_det": "رقم الحساب التحليلي الفرعي",
+                "caption_det_en": "Sub Analytical Account Number",
+                "description_en": "Sub-account code detail."
+            },
+            "csh_amt": {
+                "name": "CSH_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع نقدا.",
+                "caption_det": "المبلغ النقدى",
+                "caption_det_en": "The Cash Amount",
+                "description_en": "Amount paid in cash."
+            },
+            "bnk_amt": {
+                "name": "BNK_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع عن طريق البنك .",
+                "caption_det": "مبلغ البنك",
+                "caption_det_en": "Bank Amount",
+                "description_en": "Amount paid via bank."
+            },
+            "crdt_amt": {
+                "name": "CRDT_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع على الائتمان.",
+                "caption_det": "المبلغ الأجل",
+                "caption_det_en": "The Amount Of The Term",
+                "description_en": "Amount paid on credit."
+            },
+            "cpn_amt": {
+                "name": "CPN_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكوبون",
+                "caption_det_en": "The Coupon Amount",
+                "description_en": ""
+            },
+            "ac_amt": {
+                "name": "AC_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الحساب.",
+                "caption_det": "مبلغ الحساب",
+                "caption_det_en": "Account Amount",
+                "description_en": "Account amount."
+            },
+            "rplc_amt": {
+                "name": "RPLC_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الاستبدال",
+                "caption_det_en": "The Replacement Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc": {
+                "name": "POINT_AMT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الاستبدال",
+                "caption_det_en": "Amount Of Redemption Points",
+                "description_en": ""
+            },
+            "doc_amt": {
+                "name": "DOC_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للوثيقة.",
+                "caption_det": "مبلغ الوثيقة",
+                "caption_det_en": "Document Amount",
+                "description_en": "Total document amount."
+            },
+            "dscnt_amt": {
+                "name": "DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount."
+            },
+            "othr_amt": {
+                "name": "OTHR_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ أو رسوم أخرى.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "Amount Of Burdens",
+                "description_en": "Other amount or charges."
+            },
+            "tax_amt": {
+                "name": "TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "Tax Amount",
+                "description_en": "Tax amount."
+            },
+            "dscnt_amt_add": {
+                "name": "DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم الإضافي.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount."
+            },
+            "csh_amt_local": {
+                "name": "CSH_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "المبلغ النقدي المحلي",
+                "caption_det_en": "The Local Cash Amount",
+                "description_en": ""
+            },
+            "bnk_amt_local": {
+                "name": "BNK_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ البنك المحلي",
+                "caption_det_en": "Local Bank Amount",
+                "description_en": ""
+            },
+            "crdt_amt_local": {
+                "name": "CRDT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الأجل المحلي",
+                "caption_det_en": "The Local Term Amount",
+                "description_en": ""
+            },
+            "cpn_amt_local": {
+                "name": "CPN_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكويون المحلي",
+                "caption_det_en": "The Amount Of The Local Currency",
+                "description_en": ""
+            },
+            "ac_amt_local": {
+                "name": "AC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الحساب المحلي",
+                "caption_det_en": "Local Account Amount",
+                "description_en": ""
+            },
+            "rplc_amt_local": {
+                "name": "RPLC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الإستبدال المحلي",
+                "caption_det_en": "Local Exchange Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc_local": {
+                "name": "POINT_AMT_RPLC_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الإستبدال المحلي",
+                "caption_det_en": "Amount Of Local Redemption Points",
+                "description_en": ""
+            },
+            "totl_bill_amt": {
+                "name": "TOTL_BILL_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الفاتورة.",
+                "caption_det": "إجمالي مبلغ الفاتورة",
+                "caption_det_en": "Total Amount Of The Invoice",
+                "description_en": "Total bill amount."
+            },
+            "totl_bill_amt_local": {
+                "name": "TOTL_BILL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي مبلغ الفاتورة المحلي",
+                "caption_det_en": "Total Amount Of The Local Invoice",
+                "description_en": ""
+            },
+            "sman_code": {
+                "name": "SMAN_CODE",
+                "type": "VARCHAR2",
+                "description": "كود البائع .",
+                "caption_det": "رقم المندوب",
+                "caption_det_en": "Representative Number",
+                "description_en": "Salesman code."
+            },
+            "mrktr_code": {
+                "name": "MRKTR_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المسوق",
+                "caption_det_en": "Marketing Number",
+                "description_en": ""
+            },
+            "clctr_code": {
+                "name": "CLCTR_CODE",
+                "type": "NUMBER",
+                "description": "رمز المجمع.",
+                "caption_det": "رقم المحصل",
+                "caption_det_en": "Collector Number",
+                "description_en": "Collector code."
+            },
+            "emp_code": {
+                "name": "EMP_CODE",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم الموظف",
+                "caption_det_en": "Employee Number",
+                "description_en": ""
+            },
+            "drvr_no": {
+                "name": "DRVR_NO",
+                "type": "NUMBER",
+                "description": "رقم السائق.",
+                "caption_det": "رقم السائق",
+                "caption_det_en": "Driver Number",
+                "description_en": "Driver number."
+            },
+            "rgn_no": {
+                "name": "RGN_NO",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم المنطقة",
+                "caption_det_en": "Area Number",
+                "description_en": ""
+            },
+            "sub_ldgr1_code": {
+                "name": "SUB_LDGR1_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم مركز التكلفة",
+                "caption_det_en": "Cost Center Number",
+                "description_en": ""
+            },
+            "sub_ldgr2_code": {
+                "name": "SUB_LDGR2_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المشروع",
+                "caption_det_en": "Project Number",
+                "description_en": ""
+            },
+            "sub_ldgr3_code": {
+                "name": "SUB_LDGR3_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم اللأنشطة",
+                "caption_det_en": "Activity Number",
+                "description_en": ""
+            },
+            "sub_ldgr4_code": {
+                "name": "SUB_LDGR4_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعى الأول",
+                "caption_det_en": "The First Sub-Guide",
+                "description_en": ""
+            },
+            "sub_ldgr5_code": {
+                "name": "SUB_LDGR5_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثاني",
+                "caption_det_en": "The Second Sub Guide",
+                "description_en": ""
+            },
+            "sub_ldgr6_code": {
+                "name": "SUB_LDGR6_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثالث",
+                "caption_det_en": "The Third Sub-Guide",
+                "description_en": ""
+            },
+            "tax_code": {
+                "name": "TAX_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الضريبة.",
+                "caption_det": "رمز الضريبة",
+                "caption_det_en": "Tax Code",
+                "description_en": "Tax code."
+            },
+            "doc_due_date": {
+                "name": "DOC_DUE_DATE",
+                "type": "DATE",
+                "description": "تاريخ استحقاق الوثيقة.",
+                "caption_det": "تاريخ الإستحقاق",
+                "caption_det_en": "Due Date",
+                "description_en": "Due date for the document."
+            },
+            "doc_dsc": {
+                "name": "DOC_DSC",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "البيان",
+                "caption_det_en": "The Statement",
+                "description_en": ""
+            },
+            "ref_no": {
+                "name": "REF_NO",
+                "type": "VARCHAR2",
+                "description": "الرقم المرجعي.",
+                "caption_det": "رقم المرجع",
+                "caption_det_en": "Reference Number",
+                "description_en": "Reference number."
+            },
+            "mnl_no": {
+                "name": "MNL_NO",
+                "type": "VARCHAR2",
+                "description": "رقم الدليل المخصص للمستند.",
+                "caption_det": "الرقم اليدوي",
+                "caption_det_en": "The Manual Number",
+                "description_en": "Manual number assigned to the document."
+            },
+            "chq_note_no": {
+                "name": "CHQ_NOTE_NO",
+                "type": "NUMBER",
+                "description": "رقم الشيك أو الملاحظة.",
+                "caption_det": "رقم الإشعار",
+                "caption_det_en": "Notification Number",
+                "description_en": "Cheque or note number."
+            },
+            "chq_note_date": {
+                "name": "CHQ_NOTE_DATE",
+                "type": "DATE",
+                "description": "تاريخ الشيك أو الملاحظة.",
+                "caption_det": "تاريخ الإشعار",
+                "caption_det_en": "Date Of Notification",
+                "description_en": "Date of cheque or note."
+            },
+            "comm_prcnt": {
+                "name": "COMM_PRCNT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نسبة العمولة",
+                "caption_det_en": "Commission Rate",
+                "description_en": ""
+            },
+            "tax_ctgry_no": {
+                "name": "TAX_CTGRY_NO",
+                "type": "NUMBER",
+                "description": "رقم الفئة الضريبية.",
+                "caption_det": "طريقة إحتساب الضريبة",
+                "caption_det_en": "Method Of Calculating The Tax",
+                "description_en": "Tax category number."
+            },
+            "tax_bill_typ": {
+                "name": "TAX_BILL_TYP",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نوع الفاتورة الضريبي",
+                "caption_det_en": "Type Of Tax Invoice",
+                "description_en": ""
+            },
+            "reson_typ": {
+                "name": "RESON_TYP",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نوع سبب الارجاع",
+                "caption_det_en": "Type Of Return Reason",
+                "description_en": ""
+            },
+            "reson_desc": {
+                "name": "RESON_DESC",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "وصف سبب الارجاع",
+                "caption_det_en": "Description Of The Return Reason",
+                "description_en": ""
+            },
+            "clc_tax_free_qty_flg": {
+                "name": "CLC_TAX_FREE_QTY_FLG",
+                "type": "NUMBER",
+                "description": "وضع علامة لحساب الكمية المعفاة من الضرائب.",
+                "caption_det": "طريقة إحتساب ضريبة الكميات المجانية",
+                "caption_det_en": "Method Of Calculating The Tax On Free Quantities",
+                "description_en": "Flag to calculate tax-free quantity."
+            },
+            "vrfy_flg": {
+                "name": "VRFY_FLG",
+                "type": "NUMBER",
+                "description": "علامة التحقق.",
+                "caption_det": "مؤشر المراجعة",
+                "caption_det_en": "Review Indicator",
+                "description_en": "Verification flag."
+            },
+            "stndby_flg": {
+                "name": "STNDBY_FLG",
+                "type": "NUMBER",
+                "description": "علم الاستعداد.",
+                "caption_det": "مؤشر التعليق",
+                "caption_det_en": "Comment Indicator",
+                "description_en": "Standby flag."
+            },
+            "pst_flg": {
+                "name": "PST_FLG",
+                "type": "NUMBER",
+                "description": "نشر العلم.",
+                "caption_det": "مؤشر الترحيل",
+                "caption_det_en": "Migration Index",
+                "description_en": "Posting flag."
+            },
+            "yr_no": {
+                "name": "YR_NO",
+                "type": "NUMBER",
+                "description": "رقم السنة.",
+                "caption_det": "السنة",
+                "caption_det_en": "The Year",
+                "description_en": "Year number."
+            },
+            "crt_usr": {
+                "name": "CRT_USR",
+                "type": "NUMBER",
+                "description": "تم إنشاؤها بواسطة المستخدم.",
+                "caption_det": "رقم المستخدم مدخل السجل",
+                "caption_det_en": "User Number Record Entry",
+                "description_en": "Created by user."
+            },
+            "crt_date": {
+                "name": "CRT_DATE",
+                "type": "DATE",
+                "description": "تاريخ الإنشاء.",
+                "caption_det": "تاريخ الإدخال",
+                "caption_det_en": "Entry Date",
+                "description_en": "Creation date."
+            },
+            "itm_code": {
+                "name": "ITM_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز السلعة.",
+                "caption_det": "رقم الصنف",
+                "caption_det_en": "Item Number",
+                "description_en": "Item code."
+            },
+            "itm_unt": {
+                "name": "ITM_UNT",
+                "type": "VARCHAR2",
+                "description": "وحدة السلعة.",
+                "caption_det": "الوحدة",
+                "caption_det_en": "The Unit",
+                "description_en": "Item unit."
+            },
+            "itm_sz": {
+                "name": "ITM_SZ",
+                "type": "NUMBER",
+                "description": "حجم السلعة.",
+                "caption_det": "العبوة",
+                "caption_det_en": "The Container",
+                "description_en": "Item size."
+            },
+            "exp_date": {
+                "name": "EXP_DATE",
+                "type": "DATE",
+                "description": "تاريخ انتهاء صلاحية السلعة.",
+                "caption_det": "تاريخ الإنتهاء",
+                "caption_det_en": "Expiration Date",
+                "description_en": "Item expiration date."
+            },
+            "itm_sgmnt_cntct": {
+                "name": "ITM_SGMNT_CNTCT",
+                "type": "VARCHAR2",
+                "description": "جهة اتصال شريحة العنصر.",
+                "caption_det": "رقم الدفعة",
+                "caption_det_en": "Batch Number",
+                "description_en": "Item segment contact."
+            },
+            "itm_qty": {
+                "name": "ITM_QTY",
+                "type": "NUMBER",
+                "description": "كمية السلعة.",
+                "caption_det": "الكمية",
+                "caption_det_en": "The Quantity",
+                "description_en": "Item quantity."
+            },
+            "itm_free_qty": {
+                "name": "ITM_FREE_QTY",
+                "type": "NUMBER",
+                "description": "كمية مجانية من السلعة.",
+                "caption_det": "الكمية المجانية",
+                "caption_det_en": "The Free Quantity",
+                "description_en": "Free quantity of the item."
+            },
+            "itm_free_qty_add": {
+                "name": "ITM_FREE_QTY_ADD",
+                "type": "NUMBER",
+                "description": "كمية إضافية مجانية من السلعة.",
+                "caption_det": "الكمية المجانية الإضافية",
+                "caption_det_en": "The Additional Free Quantity",
+                "description_en": "Additional free quantity of the item."
+            },
+            "itm_totl_qty": {
+                "name": "ITM_TOTL_QTY",
+                "type": "NUMBER",
+                "description": "الكمية الإجمالية للعنصر.",
+                "caption_det": "إجمالي الكمية",
+                "caption_det_en": "Total Quantity",
+                "description_en": "Total quantity of the item."
+            },
+            "itm_totl_free_qty": {
+                "name": "ITM_TOTL_FREE_QTY",
+                "type": "NUMBER",
+                "description": "إجمالي الكمية المجانية من السلعة.",
+                "caption_det": "إجمالي الكمية المجانية",
+                "caption_det_en": "Total Free Quantity",
+                "description_en": "Total free quantity of the item."
+            },
+            "itm_mn_qty": {
+                "name": "ITM_MN_QTY",
+                "type": "NUMBER",
+                "description": "الكمية الرئيسية للسلعة.",
+                "caption_det": "الكمية بالوحدة الصغيرة",
+                "caption_det_en": "The Quantity In The Small Unit",
+                "description_en": "Main quantity of the item."
+            },
+            "itm_mn_free_qty": {
+                "name": "ITM_MN_FREE_QTY",
+                "type": "NUMBER",
+                "description": "الكمية المجانية الرئيسية للصنف.",
+                "caption_det": "الكمية المجانية بالوحدة الصغيرة",
+                "caption_det_en": "The Free Quantity In The Small Unit",
+                "description_en": "Main free quantity of the item."
+            },
+            "itm_mn_free_qty_add": {
+                "name": "ITM_MN_FREE_QTY_ADD",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "الكمية الإضافية المجانية بالوحدة الصغيرة",
+                "caption_det_en": "The Additional Free Quantity In The Small Unit",
+                "description_en": ""
+            },
+            "itm_totl_mn_qty": {
+                "name": "ITM_TOTL_MN_QTY",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الكمية بالوحدة الصغيرة",
+                "caption_det_en": "Total Quantity In The Small Unit",
+                "description_en": ""
+            },
+            "itm_mn_totl_mn_free_qty": {
+                "name": "ITM_MN_TOTL_MN_FREE_QTY",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الكمية المجانية بالوحدة الصغيرة",
+                "caption_det_en": "Total Free Quantity In Small Unit",
+                "description_en": ""
+            },
+            "itm_price": {
+                "name": "ITM_PRICE",
+                "type": "NUMBER",
+                "description": "سعر السلعة.",
+                "caption_det": "سعر الصنف",
+                "caption_det_en": "Item Price",
+                "description_en": "Price of the item."
+            },
+            "itm_stk_cst": {
+                "name": "ITM_STK_CST",
+                "type": "NUMBER",
+                "description": "تكلفة مخزون السلعة.",
+                "caption_det": "تكلفة الصنف",
+                "caption_det_en": "The Cost Of The Item",
+                "description_en": "Stock cost of the item."
+            },
+            "itm_tax_prcnt": {
+                "name": "ITM_TAX_PRCNT",
+                "type": "NUMBER",
+                "description": "نسبة الضريبة على السلعة.",
+                "caption_det": "نسبة الضريبة",
+                "caption_det_en": "Tax Rate",
+                "description_en": "Tax percentage on the item."
+            },
+            "itm_tax_amt": {
+                "name": "ITM_TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة على السلعة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "The Amount Of Tax",
+                "description_en": "Tax amount on the item."
+            },
+            "itm_othr_chrg_amt": {
+                "name": "ITM_OTHR_CHRG_AMT",
+                "type": "NUMBER",
+                "description": "رسوم أخرى على هذا البند.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "Amount Of Burdens",
+                "description_en": "Other charges on the item."
+            },
+            "itm_dscnt_amt": {
+                "name": "ITM_DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم على السلعة.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount on the item."
+            },
+            "itm_dscnt_amt_add": {
+                "name": "ITM_DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ خصم إضافي على هذا البند.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount on the item."
+            },
+            "itm_totl_price": {
+                "name": "ITM_TOTL_PRICE",
+                "type": "NUMBER",
+                "description": "السعر الإجمالي للسلعة.",
+                "caption_det": "إجمالي سعر الصنف",
+                "caption_det_en": "Total Price Of The Item",
+                "description_en": "Total price of the item."
+            },
+            "itm_totl_dscnt_amt": {
+                "name": "ITM_TOTL_DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الخصم على السلعة.",
+                "caption_det": "إجمالي خصم الصنف",
+                "caption_det_en": "Total Item Discount",
+                "description_en": "Total discount amount on the item."
+            },
+            "itm_totl_othr_chrg_amt": {
+                "name": "ITM_TOTL_OTHR_CHRG_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي الرسوم الأخرى على هذا البند.",
+                "caption_det": "إجمالي أعباء الصنف",
+                "caption_det_en": "Total Burden Of The Item",
+                "description_en": "Total other charges on the item."
+            },
+            "itm_totl_tax_amt": {
+                "name": "ITM_TOTL_TAX_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الضريبة على السلعة.",
+                "caption_det": "إجمالي مبلغ  الضريبة",
+                "caption_det_en": "Total Amount Of The Tax",
+                "description_en": "Total tax amount on the item."
+            },
+            "itm_totl_dscnt_amt_add": {
+                "name": "ITM_TOTL_DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الخصم الإضافي على السلعة.",
+                "caption_det": "إجمالي مبلغ الخصومات الإضافية للصنف",
+                "caption_det_en": "Total Amount Of Additional Discounts For The Item",
+                "description_en": "Total additional discount amount on the item."
+            },
+            "itm_totl_amt": {
+                "name": "ITM_TOTL_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للعنصر.",
+                "caption_det": "إجمالي المبلغ",
+                "caption_det_en": "Total Amount",
+                "description_en": "Total amount of the item."
+            },
+            "itm_totl_stk_cst": {
+                "name": "ITM_TOTL_STK_CST",
+                "type": "NUMBER",
+                "description": "إجمالي تكلفة المخزون لهذا البند.",
+                "caption_det": "إجمالي تكلفة الصنف",
+                "caption_det_en": "Total Cost Of The Item",
+                "description_en": "Total stock cost of the item."
+            },
+            "itm_totl_price_local": {
+                "name": "ITM_TOTL_PRICE_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي سعر الصنف بالعملة المحلية",
+                "caption_det_en": "Total Price Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_dscnt_amt_local": {
+                "name": "ITM_TOTL_DSCNT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي خصم الصنف بالعملة المحلية",
+                "caption_det_en": "Total Discount Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_othr_amt_local": {
+                "name": "ITM_TOTL_OTHR_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي أعباء الصنف بالعملة المحلية",
+                "caption_det_en": "Total Burden Of The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_tax_amt_local": {
+                "name": "ITM_TOTL_TAX_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي ضريبة الصنف بالعملة المحلية",
+                "caption_det_en": "Total Item Tax In Local Currency",
+                "description_en": ""
+            },
+            "itm_dscnt_amt_add_local": {
+                "name": "ITM_DSCNT_AMT_ADD_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي الخصومات الإضافية للصنف بالعملة المحلية",
+                "caption_det_en": "Total Additional Discounts For The Item In Local Currency",
+                "description_en": ""
+            },
+            "itm_totl_amt_local": {
+                "name": "ITM_TOTL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي المبلغ بالعملة المحلية",
+                "caption_det_en": "Total Amount In Local Currency",
+                "description_en": ""
+            },
+            "doc_no_ref_bill": {
+                "name": "DOC_NO_REF_BILL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم الوثيقة المرجعية",
+                "caption_det_en": "Document Reference Number",
+                "description_en": ""
+            },
+            "doc_srl_ref_bill": {
+                "name": "DOC_SRL_REF_BILL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "تسلسل الوثيقة المرجعية",
+                "caption_det_en": "Document Reference Sequence",
+                "description_en": ""
+            },
+            "srvc_flg": {
+                "name": "SRVC_FLG",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "صنف خدمي",
+                "caption_det_en": "Service Category",
+                "description_en": ""
+            },
+            "doc_d_sq": {
+                "name": "DOC_D_SQ",
+                "type": "NUMBER",
+                "description": "تسلسل تفاصيل الوثيقة",
+                "caption_det": "تسلسل الصنف بالوثيقة",
+                "caption_det_en": "Item Sequence In The Document",
+                "description_en": "Document detail sequence."
+            }
+        }
+    },
+    "SALES_RT_BILL_MST_AI_VW": {
+        "table_name": "SALES_RT_BILL_MST_AI_VW",
+        "columns": {
+            "typ_no": {
+                "name": "TYP_NO",
+                "type": "NUMBER",
+                "description": "اكتب الرقم المتعلق بالمستند.",
+                "caption_det": "رقم النوع",
+                "caption_det_en": "Type Number",
+                "description_en": "Type number related to the document."
+            },
+            "doc_no": {
+                "name": "DOC_NO",
+                "type": "NUMBER",
+                "description": "رقم الوثيقة.",
+                "caption_det": "رقم الوثيقة",
+                "caption_det_en": "Document Number",
+                "description_en": "Document number."
+            },
+            "doc_srl": {
+                "name": "DOC_SRL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "تسلسل الوثيقة",
+                "caption_det_en": "Document Sequence",
+                "description_en": ""
+            },
+            "doc_date": {
+                "name": "DOC_DATE",
+                "type": "DATE",
+                "description": "تاريخ الوثيقة.",
+                "caption_det": "تاريخ الوثيقة",
+                "caption_det_en": "Document Date",
+                "description_en": "Date of the document."
+            },
+            "mnl_date": {
+                "name": "MNL_DATE",
+                "type": "DATE",
+                "description": "",
+                "caption_det": "التاريخ اليدوي",
+                "caption_det_en": "The Manual History",
+                "description_en": ""
+            },
+            "cur_code": {
+                "name": "CUR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العملة المستخدم في المعاملة.",
+                "caption_det": "رمز العملة",
+                "caption_det_en": "Currency Code",
+                "description_en": "Currency code used in the transaction."
+            },
+            "cur_rate": {
+                "name": "CUR_RATE",
+                "type": "NUMBER",
+                "description": "سعر صرف العملة.",
+                "caption_det": "سعر صرف الحساب",
+                "caption_det_en": "Exchange Rate Of The Account",
+                "description_en": "Currency exchange rate."
+            },
+            "stk_rate": {
+                "name": "STK_RATE",
+                "type": "NUMBER",
+                "description": "سعر السهم.",
+                "caption_det": "سعر صرف المخزن",
+                "caption_det_en": "The Exchange Rate Of The Warehouse",
+                "description_en": "Stock rate."
+            },
+            "wrhs_code": {
+                "name": "WRHS_CODE",
+                "type": "NUMBER",
+                "description": "رمز المستودع.",
+                "caption_det": "رقم المخزن",
+                "caption_det_en": "Warehouse Number",
+                "description_en": "Warehouse code."
+            },
+            "unt_no": {
+                "name": "UNT_NO",
+                "type": "NUMBER",
+                "description": "رقم الوحدة.",
+                "caption_det": "رقم الوحدة المحاسبية",
+                "caption_det_en": "Accounting Unit Number",
+                "description_en": "Unit number."
+            },
+            "pymnt_csh": {
+                "name": "PYMNT_CSH",
+                "type": "NUMBER",
+                "description": "الدفع بمبلغ نقدي.",
+                "caption_det": "طريقة دفع نقد",
+                "caption_det_en": "Cash Payment Method",
+                "description_en": "Payment in cash amount."
+            },
+            "pymnt_bnk": {
+                "name": "PYMNT_BNK",
+                "type": "NUMBER",
+                "description": "تم الدفع عن طريق البنك .",
+                "caption_det": "طريقة دفع بنك",
+                "caption_det_en": "Bank Payment Method",
+                "description_en": "Payment made via bank."
+            },
+            "pymnt_crdt": {
+                "name": "PYMNT_CRDT",
+                "type": "NUMBER",
+                "description": "الدفع على الائتمان.",
+                "caption_det": "طريقة دفع أجل",
+                "caption_det_en": "Payment Method For A Due Date",
+                "description_en": "Payment on credit."
+            },
+            "pymnt_cpn": {
+                "name": "PYMNT_CPN",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع كوبون",
+                "caption_det_en": "Method Of Paying A Coupon",
+                "description_en": ""
+            },
+            "pymnt_ac": {
+                "name": "PYMNT_AC",
+                "type": "NUMBER",
+                "description": "الدفع في الحساب.",
+                "caption_det": "طريقة دفع حساب",
+                "caption_det_en": "Payment Method",
+                "description_en": "Payment in an account."
+            },
+            "pymnt_point_rplc": {
+                "name": "PYMNT_POINT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع  إستبدال نقاط",
+                "caption_det_en": "Payment Method For Redeeming Points",
+                "description_en": ""
+            },
+            "pymnt_rplc": {
+                "name": "PYMNT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "طريقة دفع إستبدال",
+                "caption_det_en": "Method Of Payment For Exchange",
+                "description_en": ""
+            },
+            "cstmr_code": {
+                "name": "CSTMR_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز العميل.",
+                "caption_det": "رقم العميل",
+                "caption_det_en": "Customer Number",
+                "description_en": "Customer code."
+            },
+            "cstmr_nm": {
+                "name": "CSTMR_NM",
+                "type": "VARCHAR2",
+                "description": "اسم العميل.",
+                "caption_det": "اسم العميل",
+                "caption_det_en": "Client Name",
+                "description_en": "Customer name."
+            },
+            "cstmr_mobile": {
+                "name": "CSTMR_MOBILE",
+                "type": "VARCHAR2",
+                "description": "رقم الهاتف المحمول للعميل.",
+                "caption_det": "رقم الجوال",
+                "caption_det_en": "Mobile Number",
+                "description_en": "Customer mobile number."
+            },
+            "ac_code_dtl_sub_cst": {
+                "name": "AC_CODE_DTL_SUB_CST",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المستفيد",
+                "caption_det_en": "Beneficiary Number",
+                "description_en": ""
+            },
+            "csh_code": {
+                "name": "CSH_CODE",
+                "type": "NUMBER",
+                "description": "رمز النقدية.",
+                "caption_det": "رقم الصندوق",
+                "caption_det_en": "Box Number",
+                "description_en": "Cash code."
+            },
+            "bnk_code": {
+                "name": "BNK_CODE",
+                "type": "NUMBER",
+                "description": "رمز البنك.",
+                "caption_det": "رقم البنك",
+                "caption_det_en": "Bank Number",
+                "description_en": "Bank code."
+            },
+            "ac_code_dtl_sub_bnk": {
+                "name": "AC_CODE_DTL_SUB_BNK",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي للبنك.",
+                "caption_det": "رقم البنك الفرعي",
+                "caption_det_en": "Branch Bank Number",
+                "description_en": "Bank sub-account code detail."
+            },
+            "ac_code": {
+                "name": "AC_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب أو الرقم المرتبط بالمعاملة.",
+                "caption_det": "رقم الحساب",
+                "caption_det_en": "Account Number",
+                "description_en": "Account code or number associated with the transaction."
+            },
+            "ac_code_dtl": {
+                "name": "AC_CODE_DTL",
+                "type": "VARCHAR2",
+                "description": "رمز الحساب التفصيلي.",
+                "caption_det": "رقم الحساب التحليلي",
+                "caption_det_en": "Analytical Account Number",
+                "description_en": "Detailed account code."
+            },
+            "ac_dtl_typ": {
+                "name": "AC_DTL_TYP",
+                "type": "NUMBER",
+                "description": "نوع الحساب التفصيلي.",
+                "caption_det": "نوع الحساب",
+                "caption_det_en": "Type Of Account",
+                "description_en": "Type of detailed account."
+            },
+            "ac_code_dtl_sub": {
+                "name": "AC_CODE_DTL_SUB",
+                "type": "VARCHAR2",
+                "description": "تفاصيل رمز الحساب الفرعي.",
+                "caption_det": "رقم الحساب التحليلي الفرعي",
+                "caption_det_en": "Sub-Analytical Account Number",
+                "description_en": "Sub-account code detail."
+            },
+            "csh_amt": {
+                "name": "CSH_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع نقدا.",
+                "caption_det": "المبلغ النقدى",
+                "caption_det_en": "The Cash Amount",
+                "description_en": "Amount paid in cash."
+            },
+            "bnk_amt": {
+                "name": "BNK_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع عن طريق البنك .",
+                "caption_det": "مبلغ البنك",
+                "caption_det_en": "Bank Amount",
+                "description_en": "Amount paid via bank."
+            },
+            "crdt_amt": {
+                "name": "CRDT_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ المدفوع على الائتمان.",
+                "caption_det": "المبلغ الأجل",
+                "caption_det_en": "The Amount Of Time",
+                "description_en": "Amount paid on credit."
+            },
+            "cpn_amt": {
+                "name": "CPN_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكوبون",
+                "caption_det_en": "The Coupon Amount",
+                "description_en": ""
+            },
+            "ac_amt": {
+                "name": "AC_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الحساب.",
+                "caption_det": "مبلغ الحساب",
+                "caption_det_en": "Account Amount",
+                "description_en": "Account amount."
+            },
+            "rplc_amt": {
+                "name": "RPLC_AMT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الاستبدال",
+                "caption_det_en": "The Replacement Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc": {
+                "name": "POINT_AMT_RPLC",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الاستبدال",
+                "caption_det_en": "Amount Of Redemption Points",
+                "description_en": ""
+            },
+            "doc_amt": {
+                "name": "DOC_AMT",
+                "type": "NUMBER",
+                "description": "المبلغ الإجمالي للوثيقة.",
+                "caption_det": "مبلغ الوثيقة",
+                "caption_det_en": "Document Amount",
+                "description_en": "Total document amount."
+            },
+            "dscnt_amt": {
+                "name": "DSCNT_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم.",
+                "caption_det": "مبلغ الخصم",
+                "caption_det_en": "Discount Amount",
+                "description_en": "Discount amount."
+            },
+            "othr_amt": {
+                "name": "OTHR_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ أو رسوم أخرى.",
+                "caption_det": "مبلغ الأعباء",
+                "caption_det_en": "Amount Of Burdens",
+                "description_en": "Other amount or charges."
+            },
+            "tax_amt": {
+                "name": "TAX_AMT",
+                "type": "NUMBER",
+                "description": "مبلغ الضريبة.",
+                "caption_det": "مبلغ الضريبة",
+                "caption_det_en": "Tax Amount",
+                "description_en": "Tax amount."
+            },
+            "dscnt_amt_add": {
+                "name": "DSCNT_AMT_ADD",
+                "type": "NUMBER",
+                "description": "مبلغ الخصم الإضافي.",
+                "caption_det": "مبلغ الخصم الإضافي",
+                "caption_det_en": "Additional Discount Amount",
+                "description_en": "Additional discount amount."
+            },
+            "csh_amt_local": {
+                "name": "CSH_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "المبلغ النقدي المحلي",
+                "caption_det_en": "The Local Cash Amount",
+                "description_en": ""
+            },
+            "bnk_amt_local": {
+                "name": "BNK_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ البنك المحلي",
+                "caption_det_en": "Local Bank Amount",
+                "description_en": ""
+            },
+            "crdt_amt_local": {
+                "name": "CRDT_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الأجل المحلي",
+                "caption_det_en": "The Amount Of The Local Term",
+                "description_en": ""
+            },
+            "cpn_amt_local": {
+                "name": "CPN_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الكويون المحلي",
+                "caption_det_en": "The Amount Of The Local Currency",
+                "description_en": ""
+            },
+            "ac_amt_local": {
+                "name": "AC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الحساب المحلي",
+                "caption_det_en": "Local Account Amount",
+                "description_en": ""
+            },
+            "rplc_amt_local": {
+                "name": "RPLC_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ الإستبدال المحلي",
+                "caption_det_en": "Local Exchange Amount",
+                "description_en": ""
+            },
+            "point_amt_rplc_local": {
+                "name": "POINT_AMT_RPLC_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "مبلغ نقاط الإستبدال المحلي",
+                "caption_det_en": "Amount Of Local Redemption Points",
+                "description_en": ""
+            },
+            "totl_bill_amt": {
+                "name": "TOTL_BILL_AMT",
+                "type": "NUMBER",
+                "description": "إجمالي مبلغ الفاتورة.",
+                "caption_det": "إجمالي مبلغ الفاتورة",
+                "caption_det_en": "Total Amount Of The Invoice",
+                "description_en": "Total bill amount."
+            },
+            "totl_bill_amt_local": {
+                "name": "TOTL_BILL_AMT_LOCAL",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "إجمالي مبلغ الفاتورة المحلي",
+                "caption_det_en": "Total Amount Of The Local Invoice",
+                "description_en": ""
+            },
+            "sman_code": {
+                "name": "SMAN_CODE",
+                "type": "VARCHAR2",
+                "description": "كود البائع .",
+                "caption_det": "رقم المندوب",
+                "caption_det_en": "Representative Number",
+                "description_en": "Salesman code."
+            },
+            "mrktr_code": {
+                "name": "MRKTR_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المسوق",
+                "caption_det_en": "Marketing Number",
+                "description_en": ""
+            },
+            "clctr_code": {
+                "name": "CLCTR_CODE",
+                "type": "NUMBER",
+                "description": "رمز المجمع.",
+                "caption_det": "رقم المحصل",
+                "caption_det_en": "Collector Number",
+                "description_en": "Collector code."
+            },
+            "emp_code": {
+                "name": "EMP_CODE",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم الموظف",
+                "caption_det_en": "Employee Number",
+                "description_en": ""
+            },
+            "drvr_no": {
+                "name": "DRVR_NO",
+                "type": "NUMBER",
+                "description": "رقم السائق.",
+                "caption_det": "رقم السائق",
+                "caption_det_en": "Driver Number",
+                "description_en": "Driver number."
+            },
+            "rgn_no": {
+                "name": "RGN_NO",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "رقم المنطقة",
+                "caption_det_en": "Area Number",
+                "description_en": ""
+            },
+            "sub_ldgr1_code": {
+                "name": "SUB_LDGR1_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم مركز التكلفة",
+                "caption_det_en": "Cost Center Number",
+                "description_en": ""
+            },
+            "sub_ldgr2_code": {
+                "name": "SUB_LDGR2_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم المشروع",
+                "caption_det_en": "Project Number",
+                "description_en": ""
+            },
+            "sub_ldgr3_code": {
+                "name": "SUB_LDGR3_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "رقم اللأنشطة",
+                "caption_det_en": "Activity Number",
+                "description_en": ""
+            },
+            "sub_ldgr4_code": {
+                "name": "SUB_LDGR4_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعى الأول",
+                "caption_det_en": "The First Sub-Guide",
+                "description_en": ""
+            },
+            "sub_ldgr5_code": {
+                "name": "SUB_LDGR5_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثاني",
+                "caption_det_en": "The Second Sub Guide",
+                "description_en": ""
+            },
+            "sub_ldgr6_code": {
+                "name": "SUB_LDGR6_CODE",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "الدليل الفرعي الثالث",
+                "caption_det_en": "The Third Sub-Guide",
+                "description_en": ""
+            },
+            "tax_code": {
+                "name": "TAX_CODE",
+                "type": "VARCHAR2",
+                "description": "رمز الضريبة.",
+                "caption_det": "رمز الضريبة",
+                "caption_det_en": "Tax Code",
+                "description_en": "Tax code."
+            },
+            "doc_due_date": {
+                "name": "DOC_DUE_DATE",
+                "type": "DATE",
+                "description": "تاريخ استحقاق الوثيقة.",
+                "caption_det": "تاريخ الإستحقاق",
+                "caption_det_en": "Due Date",
+                "description_en": "Due date for the document."
+            },
+            "doc_dsc": {
+                "name": "DOC_DSC",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "البيان",
+                "caption_det_en": "The Statement",
+                "description_en": ""
+            },
+            "ref_no": {
+                "name": "REF_NO",
+                "type": "VARCHAR2",
+                "description": "الرقم المرجعي.",
+                "caption_det": "رقم المرجع",
+                "caption_det_en": "Reference Number",
+                "description_en": "Reference number."
+            },
+            "mnl_no": {
+                "name": "MNL_NO",
+                "type": "VARCHAR2",
+                "description": "رقم الدليل المخصص للمستند.",
+                "caption_det": "الرقم اليدوي",
+                "caption_det_en": "The Manual Number",
+                "description_en": "Manual number assigned to the document."
+            },
+            "chq_note_no": {
+                "name": "CHQ_NOTE_NO",
+                "type": "NUMBER",
+                "description": "رقم الشيك أو الملاحظة.",
+                "caption_det": "رقم الإشعار",
+                "caption_det_en": "Notification Number",
+                "description_en": "Cheque or note number."
+            },
+            "chq_note_date": {
+                "name": "CHQ_NOTE_DATE",
+                "type": "DATE",
+                "description": "تاريخ الشيك أو الملاحظة.",
+                "caption_det": "تاريخ الإشعار",
+                "caption_det_en": "Date Of Notification",
+                "description_en": "Date of cheque or note."
+            },
+            "comm_prcnt": {
+                "name": "COMM_PRCNT",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نسبة العمولة",
+                "caption_det_en": "Commission Rate",
+                "description_en": ""
+            },
+            "tax_ctgry_no": {
+                "name": "TAX_CTGRY_NO",
+                "type": "NUMBER",
+                "description": "رقم الفئة الضريبية.",
+                "caption_det": "طريقة إحتساب الضريبة",
+                "caption_det_en": "Method Of Calculating The Tax",
+                "description_en": "Tax category number."
+            },
+            "tax_bill_typ": {
+                "name": "TAX_BILL_TYP",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نوع الفاتورة الضريبي",
+                "caption_det_en": "Type Of Tax Invoice",
+                "description_en": ""
+            },
+            "reson_typ": {
+                "name": "RESON_TYP",
+                "type": "NUMBER",
+                "description": "",
+                "caption_det": "نوع سبب الارجاع",
+                "caption_det_en": "Type Of Return Reason",
+                "description_en": ""
+            },
+            "reson_desc": {
+                "name": "RESON_DESC",
+                "type": "VARCHAR2",
+                "description": "",
+                "caption_det": "وصف سبب الارجاع",
+                "caption_det_en": "Description Of The Reason For The Return",
+                "description_en": ""
+            },
+            "clc_tax_free_qty_flg": {
+                "name": "CLC_TAX_FREE_QTY_FLG",
+                "type": "NUMBER",
+                "description": "وضع علامة لحساب الكمية المعفاة من الضرائب.",
+                "caption_det": "طريقة إحتساب ضريبة الكميات المجانية",
+                "caption_det_en": "The Method Of Calculating The Tax On Free Quantities",
+                "description_en": "Flag to calculate tax-free quantity."
+            },
+            "vrfy_flg": {
+                "name": "VRFY_FLG",
+                "type": "NUMBER",
+                "description": "علامة التحقق.",
+                "caption_det": "مؤشر المراجعة",
+                "caption_det_en": "Review Indicator",
+                "description_en": "Verification flag."
+            },
+            "stndby_flg": {
+                "name": "STNDBY_FLG",
+                "type": "NUMBER",
+                "description": "علم الاستعداد.",
+                "caption_det": "مؤشر التعليق",
+                "caption_det_en": "Comment Indicator",
+                "description_en": "Standby flag."
+            },
+            "pst_flg": {
+                "name": "PST_FLG",
+                "type": "NUMBER",
+                "description": "نشر العلم.",
+                "caption_det": "مؤشر الترحيل",
+                "caption_det_en": "Migration Index",
+                "description_en": "Posting flag."
+            },
+            "yr_no": {
+                "name": "YR_NO",
+                "type": "NUMBER",
+                "description": "رقم السنة.",
+                "caption_det": "السنة",
+                "caption_det_en": "The Year",
+                "description_en": "Year number."
+            },
+            "crt_usr": {
+                "name": "CRT_USR",
+                "type": "NUMBER",
+                "description": "تم إنشاؤها بواسطة المستخدم.",
+                "caption_det": "رقم المستخدم مدخل السجل",
+                "caption_det_en": "User Number Record Entry",
+                "description_en": "Created by user."
+            },
+            "crt_date": {
+                "name": "CRT_DATE",
+                "type": "DATE",
+                "description": "تاريخ الإنشاء.",
+                "caption_det": "تاريخ الإدخال",
+                "caption_det_en": "Entry Date",
+                "description_en": "Creation date."
+            }
+        }
+    }
+}
